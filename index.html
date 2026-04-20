@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>珠海环宇城 · 库存看板</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif;background:#F5F7FA;color:#202124;font-size:14px}
+
+.bar{background:#0051D4;color:#fff;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.bar h1{font-size:22px;font-weight:700}
+.bar .meta{font-size:13px;opacity:.85}
+.bar .stats{display:flex;gap:16px;flex-wrap:wrap}
+.bar .stat{background:rgba(255,255,255,.18);padding:4px 14px;border-radius:20px;font-size:13px;font-weight:600}
+
+.tabs{display:flex;background:#fff;border-bottom:2px solid #DADCE0;padding:0 16px}
+.tab{padding:12px 20px;cursor:pointer;font-size:14px;font-weight:600;color:#5F6368;border-bottom:3px solid transparent;margin-bottom:-2px;transition:all .15s}
+.tab:hover{color:#0051D4}
+.tab.active{color:#0051D4;border-bottom-color:#0051D4}
+
+.wrap{padding:20px;max-width:1400px;margin:0 auto}
+
+.card{background:#fff;border-radius:12px;border:1px solid #DADCE0;margin-bottom:20px;overflow:hidden}
+.card-head{background:#0051D4;color:#fff;padding:12px 20px;font-size:16px;font-weight:700;display:flex;justify-content:space-between;align-items:center}
+.card-head .badge{background:rgba(255,255,255,.25);padding:3px 12px;border-radius:12px;font-size:12px;font-weight:600}
+.card-head.red{background:#D93025}
+.card-head.orange{background:#E37400}
+.card-head.purple{background:#8E44AD}
+.card-head.dark{background:#202124}
+
+table{width:100%;border-collapse:collapse}
+thead tr{background:#F1F3F4}
+thead th{text-align:left;padding:10px 16px;font-size:12px;font-weight:700;color:#5F6368;text-transform:uppercase;letter-spacing:.5px}
+tbody tr{border-bottom:1px solid #F1F3F4;transition:background .1s}
+tbody tr:hover{background:#F8F9FA}
+tbody td{padding:10px 16px;font-size:14px;vertical-align:middle}
+
+.dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:8px;vertical-align:middle}
+.dot.green{background:#1E8E3E}
+.dot.orange{background:#E37400}
+.dot.red{background:#D93025}
+
+.tag{font-size:11px;padding:2px 8px;border-radius:10px;font-weight:600;margin-left:6px}
+.tag.green{background:#E6F4EA;color:#1E8E3E}
+.tag.orange{background:#FEF7E6;color:#E37400}
+.tag.red{background:#FCE8E6;color:#D93025}
+.tag.blue{background:#E8F0FE;color:#0051D4}
+.tag.purple{background:#F3E8FD;color:#8E44AD}
+.tag.dark{background:#F1F3F4;color:#5F6368}
+
+.qty{font-weight:700;font-size:15px}
+.qty.green{color:#1E8E3E}
+.qty.orange{color:#E37400}
+.qty.red{color:#D93025}
+
+.series-row td{background:#F8F9FA;font-weight:700;font-size:13px;color:#202124;padding:8px 16px}
+.series-row td:first-child{border-left:3px solid #0051D4}
+
+/* 主推 & 预警 两列 */
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:20px}
+@media(max-width:768px){.grid{grid-template-columns:1fr}}
+
+.panel{background:#fff;border-radius:12px;border:1px solid #DADCE0;overflow:hidden}
+.panel-head{padding:14px 20px;font-size:16px;font-weight:700;display:flex;align-items:center;gap:8px}
+.panel-head.blue{background:#E8F0FE;color:#0051D4;border-bottom:2px solid #0051D4}
+.panel-head.red{background:#FEF2F2;color:#D93025;border-bottom:2px solid #D93025}
+.panel-head .icon{font-size:18px}
+
+.push-item{display:flex;align-items:center;justify-content:space-between;padding:11px 20px;border-bottom:1px solid #F1F3F4;gap:12px}
+.push-item:last-child{border-bottom:none}
+.push-item:hover{background:#F8F9FA}
+.push-color{width:6px;height:36px;border-radius:3px;flex-shrink:0}
+.push-name{flex:1;min-width:0}
+.push-name .name{font-weight:700;font-size:14px;color:#202124;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.push-name .var{font-size:12px;color:#5F6368;margin-top:2px}
+.push-qty{font-size:20px;font-weight:700;flex-shrink:0}
+.push-qty.green{color:#1E8E3E}
+.push-qty.orange{color:#E37400}
+
+.warn-item{padding:12px 20px;border-bottom:1px solid #F1F3F4}
+.warn-item:last-child{border-bottom:none}
+.warn-item:hover{background:#F8F9FA}
+.warn-top{display:flex;align-items:center;gap:10px;margin-bottom:4px}
+.warn-sev{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.warn-sev.red{background:#D93025}
+.warn-sev.orange{background:#E37400}
+.warn-model{font-weight:700;font-size:14px;color:#202124}
+.warn-status{font-size:13px;font-weight:700;margin-left:auto}
+.warn-status.red{color:#D93025}
+.warn-status.orange{color:#E37400}
+.warn-action{font-size:12px;color:#5F6368;padding-left:18px}
+
+.footer{padding:20px;text-align:center;font-size:12px;color:#9AA0A6}
+.legend{display:flex;gap:16px;flex-wrap:wrap;padding:12px 20px;background:#F8F9FA;border-top:1px solid #DADCE0}
+.legend span{display:flex;align-items:center;gap:6px;font-size:12px;color:#5F6368}
+
+.warn-banner{display:flex;gap:12px;flex-wrap:wrap;padding:12px 20px;background:#FEF2F2;border-bottom:1px solid #FECACA}
+.warn-item-sm{display:flex;align-items:center;gap:6px;font-size:12px;color:#D93025;font-weight:600}
+</style>
+</head>
+<body>
+
+<div class="bar">
+  <div>
+    <h1>珠海环宇城 · 库存看板</h1>
+    <div class="meta" id="meta">更新日期：加载中…</div>
+  </div>
+  <div class="stats" id="stats"></div>
+</div>
+
+<div class="tabs" id="tabs">
+  <div class="tab active" onclick="showTab('phone')">📱 手机 iPhone</div>
+  <div class="tab" onclick="showTab('watch')">⌚ 手表 Watch</div>
+  <div class="tab" onclick="showTab('ipad')">🖥 iPad 平板</div>
+  <div class="tab" onclick="showTab('mac')">💻 Mac 电脑</div>
+  <div class="tab" onclick="showTab('summary')">📊 主推 & 预警</div>
+</div>
+
+<div class="wrap">
+
+  <!-- 手机 -->
+  <div id="tab-phone">
+    <div class="card">
+      <div class="card-head">📱 iPhone 手机 <span class="badge" id="phone-total">加载中</span></div>
+      <table><thead><tr><th>型号</th><th>颜色 / 规格</th><th>库存</th><th>状态</th></tr></thead><tbody id="phone-body"></tbody></table>
+    </div>
+  </div>
+
+  <!-- 手表 -->
+  <div id="tab-watch" style="display:none">
+    <div class="card">
+      <div class="card-head purple">⌚ Apple Watch 手表 <span class="badge" id="watch-total">加载中</span></div>
+      <table><thead><tr><th>型号</th><th>颜色 / 规格</th><th>库存</th><th>状态</th></tr></thead><tbody id="watch-body"></tbody></table>
+    </div>
+  </div>
+
+  <!-- iPad -->
+  <div id="tab-ipad" style="display:none">
+    <div class="card">
+      <div class="card-head orange">🖥 iPad 平板 <span class="badge" id="ipad-total">加载中</span></div>
+      <table><thead><tr><th>型号</th><th>颜色 / 规格</th><th>库存</th><th>状态</th></tr></thead><tbody id="ipad-body"></tbody></table>
+    </div>
+  </div>
+
+  <!-- Mac -->
+  <div id="tab-mac" style="display:none">
+    <div class="card">
+      <div class="card-head dark">💻 Mac 电脑 <span class="badge" id="mac-total">加载中</span></div>
+      <table><thead><tr><th>型号</th><th>规格</th><th>库存</th><th>状态</th></tr></thead><tbody id="mac-body"></tbody></table>
+    </div>
+  </div>
+
+  <!-- 主推 & 预警 -->
+  <div id="tab-summary" style="display:none">
+    <div class="warn-banner" id="warn-banner"></div>
+    <div class="grid">
+      <div class="panel">
+        <div class="panel-head blue"><span class="icon">★</span> 今日主推型号</div>
+        <div id="push-list"></div>
+      </div>
+      <div class="panel">
+        <div class="panel-head red"><span class="icon">!</span> 紧缺预警 & 应对</div>
+        <div id="warn-list"></div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer">
+  珠海环宇城 Apple 授权专营店 · 库存看板 &nbsp;|&nbsp; 数据更新请联系店长
+</div>
+
+<script src="inventory.js"></script>
+<script>
+function statusLabel(s) {
+  return s === 'green' ? '<span class="dot green"></span>充足'
+       : s === 'orange' ? '<span class="dot orange"></span>偏少'
+       : '<span class="dot red"></span>紧缺';
+}
+
+function tagHtml(tag) {
+  if (!tag) return '';
+  if (tag === '主推' || tag === '★ 主推' || tag === '★ 销量王') return '<span class="tag blue">★ 主推</span>';
+  if (tag === '女性首选') return '<span class="tag purple">女性首选</span>';
+  if (tag === '控货') return '<span class="tag red">控货</span>';
+  if (tag === '紧缺控货') return '<span class="tag red">紧缺控货</span>';
+  if (tag === '转推iPad11') return '<span class="tag orange">转推iPad11代</span>';
+  if (tag === '紧急补货') return '<span class="tag red">紧急补货</span>';
+  if (tag === '按需调货') return '<span class="tag dark">按需调货</span>';
+  if (tag === '转推Air') return '<span class="tag orange">转推Air</span>';
+  if (tag.includes('注意')) return '<span class="tag orange">注意</span>';
+  return '';
+}
+
+function qtyClass(qty, status) {
+  return status === 'green' ? 'green' : status === 'orange' ? 'orange' : 'red';
+}
+
+function renderTable(data, tbodyId, totalId) {
+  let html = '';
+  let lastSeries = '';
+  data.forEach(function(row) {
+    if (row.series !== lastSeries) {
+      lastSeries = row.series;
+      html += '<tr class="series-row"><td colspan="4">' + row.series + '</td></tr>';
+    }
+    html += '<tr>' +
+      '<td style="width:30%"></td>' +
+      '<td style="width:35%">' + row.variant + '</td>' +
+      '<td style="width:15%"><span class="qty ' + qtyClass(row.qty, row.status) + '">' + row.qty + '台</span></td>' +
+      '<td style="width:20%">' + statusLabel(row.status) + tagHtml(row.tag) + '</td>' +
+      '</tr>';
+  });
+  document.getElementById(tbodyId).innerHTML = html;
+  document.getElementById(totalId).textContent = data.reduce(function(s,r){return s+r.qty},0) + ' 台';
+}
+
+function showTab(name) {
+  ['phone','watch','ipad','mac','summary'].forEach(function(t) {
+    document.getElementById('tab-' + t).style.display = t === name ? 'block' : 'none';
+  });
+  document.querySelectorAll('.tab').forEach(function(el, i) {
+    el.classList.toggle('active', ['phone','watch','ipad','mac','summary'][i] === name);
+  });
+}
+
+// 初始化
+document.getElementById('meta').textContent = '更新日期：' + DATA.updated + '   总库存 ' + DATA.summary.total + ' 台';
+document.getElementById('stats').innerHTML =
+  '<span class="stat">📱 ' + DATA.summary.phone + '</span>' +
+  '<span class="stat">⌚ ' + DATA.summary.watch + '</span>' +
+  '<span class="stat">🖥 ' + DATA.summary.ipad + '</span>' +
+  '<span class="stat">💻 ' + DATA.summary.mac + '</span>';
+
+renderTable(DATA.phone, 'phone-body', 'phone-total');
+renderTable(DATA.watch, 'watch-body', 'watch-total');
+renderTable(DATA.ipad,  'ipad-body',  'ipad-total');
+renderTable(DATA.mac,   'mac-body',   'mac-total');
+
+// 主推列表
+var pushHtml = '';
+DATA.push.forEach(function(p) {
+  pushHtml += '<div class="push-item">' +
+    '<div class="push-color" style="background:' + p.col + '"></div>' +
+    '<div class="push-name"><div class="name">' + p.model + '</div><div class="var">' + p.variant + '</div></div>' +
+    '<div class="push-qty green">' + p.qty + '台</div></div>';
+});
+document.getElementById('push-list').innerHTML = pushHtml;
+
+// 预警banner
+var warnBannerHtml = '';
+DATA.warn.forEach(function(w) {
+  warnBannerHtml += '<div class="warn-item-sm"><span class="dot red" style="background:' + (w.sev==='red'?'#D93025':'#E37400') + ';width:8px;height:8px;border-radius:50%;display:inline-block"></span>' + w.model + ' ' + w.status + '</div>';
+});
+document.getElementById('warn-banner').innerHTML = warnBannerHtml;
+
+// 预警列表
+var warnHtml = '';
+DATA.warn.forEach(function(w) {
+  warnHtml += '<div class="warn-item">' +
+    '<div class="warn-top">' +
+    '<div class="warn-sev ' + w.sev + '"></div>' +
+    '<div class="warn-model">' + w.model + '</div>' +
+    '<div class="warn-status ' + w.sev + '">' + w.status + '</div></div>' +
+    '<div class="warn-action">→ ' + w.action + '</div></div>';
+});
+document.getElementById('warn-list').innerHTML = warnHtml;
+</script>
+</body>
+</html>
