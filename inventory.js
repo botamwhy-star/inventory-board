@@ -342,59 +342,73 @@ var DATA = {
   ],
   "ipad": [
     {
-      "series": "iPad Air",
+      "series": "iPad Air 11寸",
       "variant": "星光色 128GB",
       "qty": 1,
       "status": "red",
       "tag": ""
     },
     {
-      "series": "iPad Air",
+      "series": "iPad Air 11寸",
       "variant": "星光色 256GB",
       "qty": 1,
       "status": "red",
       "tag": ""
     },
     {
-      "series": "iPad Air",
+      "series": "iPad Air 11寸",
       "variant": "深空灰色 128GB",
       "qty": 5,
       "status": "orange",
       "tag": ""
     },
     {
-      "series": "iPad Air",
+      "series": "iPad Air 11寸",
       "variant": "深空灰色 256GB",
-      "qty": 13,
+      "qty": 12,
       "status": "green",
       "tag": ""
     },
     {
-      "series": "iPad Air",
+      "series": "iPad Air 11寸",
       "variant": "紫色 128GB",
       "qty": 1,
       "status": "red",
       "tag": ""
     },
     {
-      "series": "iPad Air",
+      "series": "iPad Air 11寸",
       "variant": "蓝色 256GB",
       "qty": 1,
       "status": "red",
       "tag": ""
     },
     {
-      "series": "iPad Pro",
+      "series": "iPad Air 13寸",
+      "variant": "深空灰色 256GB",
+      "qty": 1,
+      "status": "red",
+      "tag": ""
+    },
+    {
+      "series": "iPad Pro 11寸",
       "variant": "深空黑色 256GB",
-      "qty": 4,
+      "qty": 2,
+      "status": "red",
+      "tag": ""
+    },
+    {
+      "series": "iPad Pro 11寸",
+      "variant": "银色 256GB",
+      "qty": 5,
       "status": "orange",
       "tag": ""
     },
     {
-      "series": "iPad Pro",
-      "variant": "银色 256GB",
-      "qty": 5,
-      "status": "orange",
+      "series": "iPad Pro 13寸",
+      "variant": "深空黑色 256GB",
+      "qty": 2,
+      "status": "red",
       "tag": ""
     },
     {
@@ -464,42 +478,49 @@ var DATA = {
     },
     {
       "series": "MacBook Air 13.6英寸",
-      "variant": "午夜色",
+      "variant": "午夜色 16GB+512GB",
       "qty": 1,
       "status": "red",
       "tag": ""
     },
     {
       "series": "MacBook Air 13.6英寸",
-      "variant": "天蓝色",
+      "variant": "天蓝色 16GB+1TB",
       "qty": 1,
       "status": "red",
       "tag": ""
     },
     {
       "series": "MacBook Air 13.6英寸",
-      "variant": "星光色",
-      "qty": 3,
+      "variant": "星光色 16GB+1TB",
+      "qty": 2,
       "status": "red",
       "tag": ""
     },
     {
       "series": "MacBook Air 13.6英寸",
-      "variant": "银色",
+      "variant": "星光色 16GB+512GB",
+      "qty": 1,
+      "status": "red",
+      "tag": ""
+    },
+    {
+      "series": "MacBook Air 13.6英寸",
+      "variant": "银色 16GB+1TB",
       "qty": 1,
       "status": "red",
       "tag": ""
     },
     {
       "series": "MacBook Air 15.3英寸",
-      "variant": "天蓝色",
+      "variant": "天蓝色 16GB+1TB",
       "qty": 1,
       "status": "red",
       "tag": ""
     },
     {
       "series": "MacBook Air 15.3英寸",
-      "variant": "星光色",
+      "variant": "星光色 16GB+512GB",
       "qty": 1,
       "status": "red",
       "tag": ""
@@ -666,28 +687,46 @@ var DATA = {
       "action": "推 Watch Series 11 高配"
     },
     {
-      "model": "iPad Air 星光色 128GB",
+      "model": "iPad Air 11寸 星光色 128GB",
       "status": "仅1台",
       "sev": "red",
-      "action": "推 iPad 标准版或 mini"
+      "action": "推 iPad 标准版或 Pro"
     },
     {
-      "model": "iPad Air 星光色 256GB",
+      "model": "iPad Air 11寸 星光色 256GB",
       "status": "仅1台",
       "sev": "red",
-      "action": "推 iPad 标准版或 mini"
+      "action": "推 iPad 标准版或 Pro"
     },
     {
-      "model": "iPad Air 紫色 128GB",
+      "model": "iPad Air 11寸 紫色 128GB",
       "status": "仅1台",
       "sev": "red",
-      "action": "推 iPad 标准版或 mini"
+      "action": "推 iPad 标准版或 Pro"
     },
     {
-      "model": "iPad Air 蓝色 256GB",
+      "model": "iPad Air 11寸 蓝色 256GB",
       "status": "仅1台",
       "sev": "red",
-      "action": "推 iPad 标准版或 mini"
+      "action": "推 iPad 标准版或 Pro"
+    },
+    {
+      "model": "iPad Air 13寸 深空灰色 256GB",
+      "status": "仅1台",
+      "sev": "red",
+      "action": "推 iPad 标准版或 Pro"
+    },
+    {
+      "model": "iPad Pro 11寸 深空黑色 256GB",
+      "status": "仅2台",
+      "sev": "red",
+      "action": "推 iPad Air 或标准版"
+    },
+    {
+      "model": "iPad Pro 13寸 深空黑色 256GB",
+      "status": "仅2台",
+      "sev": "red",
+      "action": "推 iPad Air 或标准版"
     },
     {
       "model": "iPad mini 深空灰色 128GB",
@@ -720,37 +759,43 @@ var DATA = {
       "action": "推 iPad Air 或 iPad 标准版 256GB"
     },
     {
-      "model": "MacBook Air 13.6英寸 午夜色",
+      "model": "MacBook Air 13.6英寸 午夜色 16GB+512GB",
       "status": "仅1台",
       "sev": "red",
       "action": "推同系列高配机型"
     },
     {
-      "model": "MacBook Air 13.6英寸 天蓝色",
+      "model": "MacBook Air 13.6英寸 天蓝色 16GB+1TB",
       "status": "仅1台",
       "sev": "red",
       "action": "推同系列高配机型"
     },
     {
-      "model": "MacBook Air 13.6英寸 星光色",
-      "status": "仅3台",
-      "sev": "orange",
+      "model": "MacBook Air 13.6英寸 星光色 16GB+1TB",
+      "status": "仅2台",
+      "sev": "red",
       "action": "推同系列高配机型"
     },
     {
-      "model": "MacBook Air 13.6英寸 银色",
+      "model": "MacBook Air 13.6英寸 星光色 16GB+512GB",
       "status": "仅1台",
       "sev": "red",
       "action": "推同系列高配机型"
     },
     {
-      "model": "MacBook Air 15.3英寸 天蓝色",
+      "model": "MacBook Air 13.6英寸 银色 16GB+1TB",
       "status": "仅1台",
       "sev": "red",
       "action": "推同系列高配机型"
     },
     {
-      "model": "MacBook Air 15.3英寸 星光色",
+      "model": "MacBook Air 15.3英寸 天蓝色 16GB+1TB",
+      "status": "仅1台",
+      "sev": "red",
+      "action": "推同系列高配机型"
+    },
+    {
+      "model": "MacBook Air 15.3英寸 星光色 16GB+512GB",
       "status": "仅1台",
       "sev": "red",
       "action": "推同系列高配机型"
