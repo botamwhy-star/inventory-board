@@ -343,7 +343,42 @@ var DATA = {
   "ipad": [
     {
       "series": "iPad Air",
+      "variant": "星光色 128GB",
+      "qty": 1,
+      "status": "red",
+      "tag": ""
+    },
+    {
+      "series": "iPad Air",
+      "variant": "星光色 256GB",
+      "qty": 1,
+      "status": "red",
+      "tag": ""
+    },
+    {
+      "series": "iPad Air",
+      "variant": "深空灰色 128GB",
+      "qty": 5,
+      "status": "orange",
+      "tag": ""
+    },
+    {
+      "series": "iPad Air",
       "variant": "深空灰色 256GB",
+      "qty": 13,
+      "status": "green",
+      "tag": ""
+    },
+    {
+      "series": "iPad Air",
+      "variant": "紫色 128GB",
+      "qty": 1,
+      "status": "red",
+      "tag": ""
+    },
+    {
+      "series": "iPad Air",
+      "variant": "蓝色 256GB",
       "qty": 1,
       "status": "red",
       "tag": ""
@@ -378,34 +413,6 @@ var DATA = {
     },
     {
       "series": "iPad 标准版",
-      "variant": "星光色 128GB",
-      "qty": 1,
-      "status": "red",
-      "tag": ""
-    },
-    {
-      "series": "iPad 标准版",
-      "variant": "星光色 256GB",
-      "qty": 1,
-      "status": "red",
-      "tag": ""
-    },
-    {
-      "series": "iPad 标准版",
-      "variant": "深空灰色 128GB",
-      "qty": 5,
-      "status": "orange",
-      "tag": ""
-    },
-    {
-      "series": "iPad 标准版",
-      "variant": "深空灰色 256GB",
-      "qty": 12,
-      "status": "green",
-      "tag": ""
-    },
-    {
-      "series": "iPad 标准版",
       "variant": "粉色 128GB",
       "qty": 6,
       "status": "orange",
@@ -420,13 +427,6 @@ var DATA = {
     },
     {
       "series": "iPad 标准版",
-      "variant": "紫色 128GB",
-      "qty": 1,
-      "status": "red",
-      "tag": ""
-    },
-    {
-      "series": "iPad 标准版",
       "variant": "蓝色 128GB",
       "qty": 3,
       "status": "red",
@@ -435,8 +435,8 @@ var DATA = {
     {
       "series": "iPad 标准版",
       "variant": "蓝色 256GB",
-      "qty": 4,
-      "status": "orange",
+      "qty": 3,
+      "status": "red",
       "tag": ""
     },
     {
@@ -666,7 +666,25 @@ var DATA = {
       "action": "推 Watch Series 11 高配"
     },
     {
-      "model": "iPad Air 深空灰色 256GB",
+      "model": "iPad Air 星光色 128GB",
+      "status": "仅1台",
+      "sev": "red",
+      "action": "推 iPad 标准版或 mini"
+    },
+    {
+      "model": "iPad Air 星光色 256GB",
+      "status": "仅1台",
+      "sev": "red",
+      "action": "推 iPad 标准版或 mini"
+    },
+    {
+      "model": "iPad Air 紫色 128GB",
+      "status": "仅1台",
+      "sev": "red",
+      "action": "推 iPad 标准版或 mini"
+    },
+    {
+      "model": "iPad Air 蓝色 256GB",
       "status": "仅1台",
       "sev": "red",
       "action": "推 iPad 标准版或 mini"
@@ -684,25 +702,13 @@ var DATA = {
       "action": "推 iPad Air 或 iPad 标准版 256GB"
     },
     {
-      "model": "iPad 标准版 星光色 128GB",
-      "status": "仅1台",
-      "sev": "red",
-      "action": "推同系列高配机型"
-    },
-    {
-      "model": "iPad 标准版 星光色 256GB",
-      "status": "仅1台",
-      "sev": "red",
-      "action": "推同系列高配机型"
-    },
-    {
-      "model": "iPad 标准版 紫色 128GB",
-      "status": "仅1台",
-      "sev": "red",
-      "action": "推同系列高配机型"
-    },
-    {
       "model": "iPad 标准版 蓝色 128GB",
+      "status": "仅3台",
+      "sev": "orange",
+      "action": "推同系列高配机型"
+    },
+    {
+      "model": "iPad 标准版 蓝色 256GB",
       "status": "仅3台",
       "sev": "orange",
       "action": "推同系列高配机型"
