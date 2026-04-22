@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>珠海环宇城店 · 库存看板</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
@@ -12,7 +11,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif;backg
 .store-name{font-size:16px;font-weight:700}
 .update-time{font-size:11px;color:#8E8E93}
 .header-stats{display:flex;gap:12px;margin-top:10px;flex-wrap:wrap}
-.stat-item{text-align:center;min-width:50px}
+.stat-item{text-align:center;min-width:48px}
 .stat-num{font-size:20px;font-weight:700}
 .stat-label{font-size:10px;color:#8E8E93;margin-top:1px}
 .search-bar{padding:8px 14px;background:#fff;border-bottom:1px solid #E5E5EA}
@@ -40,7 +39,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif;backg
 .normal-b{background:#D1F5D3;color:#1B7E25}
 .flaw-b{background:#FFE5E5;color:#D70015}
 .slow-b{background:#FFF3D1;color:#B8730A}
-.sample-b{background:#E8EEFF;color:#3553C7}
 .product-detail{overflow-x:auto;background:#F9F9FB;border-top:1px solid #EBEBF0}
 .detail-table{width:100%;border-collapse:collapse;font-size:12px}
 .detail-table th{background:#EBEBF0;padding:7px 12px;text-align:left;color:#636366;font-weight:600;white-space:nowrap}
@@ -49,62 +47,55 @@ body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif;backg
 .model-cell{max-width:260px;word-break:break-all;font-size:12px;color:#3C3C43}
 .count-cell{text-align:center}
 .age-cell{text-align:center;font-weight:600;white-space:nowrap}
-.age-new{color:#32D74B}
-.age-warn{color:#FF9F0A}
-.age-old{color:#FF453A}
+.age-new{color:#32D74B}.age-warn{color:#FF9F0A}.age-old{color:#FF453A}
 .legend{display:flex;gap:14px;padding:10px 14px;background:#fff;border-radius:12px;margin-bottom:10px;flex-wrap:wrap}
 .legend-item{display:flex;align-items:center;gap:5px;font-size:11px;color:#636366}
 .legend-dot{width:9px;height:9px;border-radius:50%}
 .no-result{text-align:center;padding:40px;color:#8E8E93;display:none}
-.warn-section{background:#fff;border-radius:12px;margin-bottom:12px;overflow:hidden}
-.warn-header{padding:12px 16px;font-size:14px;font-weight:700;border-bottom:1px solid #F2F2F7;color:#FF453A}
+.script-card{border-top:1px solid #F2F2F7;padding:12px 4px}
+.script-card:first-child{border-top:none}
+.script-title{font-size:13px;font-weight:700;color:#5E5CE6;margin-bottom:6px}
+.script-body{font-size:13px;color:#3C3C43;line-height:1.6;background:#F0EFFE;border-radius:8px;padding:10px 12px}
 @media(max-width:600px){.header-stats{gap:8px}.stat-num{font-size:17px}.content{padding:6px}}
 </style>
 </head>
 <body>
 <div class="header">
-  <div class="header-top">
-    <div class="store-name">🏪 珠海环宇城店 · 库存看板</div>
-    <div class="update-time">更新：2026-04-21</div>
-  </div>
+  <div class="header-top"><div class="store-name">🏪 珠海环宇城店 · 库存看板</div><div class="update-time">更新：2026-04-22</div></div>
   <div class="header-stats">
-    <div class="stat-item"><div class="stat-num">786</div><div class="stat-label">总库存</div></div>
-    <div class="stat-item"><div class="stat-num" style="color:#007AFF">302</div><div class="stat-label">手机</div></div>
-    <div class="stat-item"><div class="stat-num" style="color:#34C759">66</div><div class="stat-label">iPad</div></div>
-    <div class="stat-item"><div class="stat-num" style="color:#FF9500">152</div><div class="stat-label">Watch</div></div>
-    <div class="stat-item"><div class="stat-num" style="color:#AF52DE">13</div><div class="stat-label">Mac</div></div>
-    <div class="stat-item"><div class="stat-num" style="color:#5AC8FA">253</div><div class="stat-label">配件</div></div>
+    <div class="stat-item"><div class="stat-num">528</div><div class="stat-label">总库存</div></div>
+    <div class="stat-item"><div class="stat-num" style="color:#007AFF">301</div><div class="stat-label">手机</div></div>
+    <div class="stat-item"><div class="stat-num" style="color:#34C759">64</div><div class="stat-label">iPad</div></div>
+    <div class="stat-item"><div class="stat-num" style="color:#FF9500">151</div><div class="stat-label">Watch</div></div>
+    <div class="stat-item"><div class="stat-num" style="color:#AF52DE">12</div><div class="stat-label">Mac</div></div>
   </div>
 </div>
-<div class="search-bar">
-  <input class="search-input" type="text" placeholder="🔍 搜索型号、颜色、存储..." oninput="searchInventory(this.value)"/>
-</div>
+<div class="search-bar"><input class="search-input" type="text" placeholder="🔍 搜索型号、颜色、存储..." oninput="searchInventory(this.value)"/></div>
 <div class="tabs">
   <div class="tab active" onclick="filterCat('all',this)">全部</div>
   <div class="tab" onclick="filterCat('智能手机',this)">📱 手机</div>
   <div class="tab" onclick="filterCat('平板电脑',this)">📲 iPad</div>
   <div class="tab" onclick="filterCat('智能手表',this)">⌚ Watch</div>
   <div class="tab" onclick="filterCat('笔记本电脑',this)">💻 Mac</div>
-  <div class="tab" onclick="filterCat('台式机',this)">🖥️ Mac mini</div>
-  <div class="tab" onclick="filterCat('真无线蓝牙耳机',this)">🎧 耳机</div>
-  <div class="tab" onclick="filterCat('苹果保护壳',this)">🛡️ 保护壳</div>
-  <div class="tab" onclick="filterCat('充电器',this)">🔌 充电器</div>
 </div>
 <div class="content">
   <div class="legend">
     <div class="legend-item"><div class="legend-dot" style="background:#32D74B"></div>库龄0-14天（新货）</div>
     <div class="legend-item"><div class="legend-dot" style="background:#FF9F0A"></div>库龄15-29天（注意）</div>
     <div class="legend-item"><div class="legend-dot" style="background:#FF453A"></div>库龄≥30天（优先推）</div>
-    <div class="legend-item">📌 点击产品卡片可展开明细</div>
+    <div class="legend-item">📌 点击产品卡片展开明细</div>
   </div>
-  <div class="warn-section">
-<div class="warn-header">🔴 老品预警（库龄≥30天，优先推售）</div>
-<table class="detail-table"><thead><tr><th>产品/型号</th><th>库存</th><th>最长库龄</th></tr></thead>
-<tbody><tr><td class="model-cell">Apple Watch SE 2024款 智能手表 铝金属系列 GPS版<br><small style="color:#8E8E93">午夜色表壳+午夜色运动型表带M/L 44毫米</small></td><td class="count-cell">2台</td><td class="age-cell age-old">261天</td></tr><tr><td class="model-cell">iPhone 16 全网通5G版<br><small style="color:#8E8E93">白色 128GB 标准版</small></td><td class="count-cell">1台</td><td class="age-cell age-old">239天</td></tr><tr><td class="model-cell">Apple Watch Series 11 智能手表 铝金属系列 GPS版<br><small style="color:#8E8E93">玫瑰金色表壳+淡桃粉色运动型表带M/L 46毫米</small></td><td class="count-cell">3台</td><td class="age-cell age-old">219天</td></tr><tr><td class="model-cell">iPhone 17 Pro 全网通5G版<br><small style="color:#8E8E93">星宇橙色 256GB 标准版</small></td><td class="count-cell">17台</td><td class="age-cell age-old">162天</td></tr><tr><td class="model-cell">iPhone 17 Pro Max 全网通5G版<br><small style="color:#8E8E93">银色 256GB 标准版</small></td><td class="count-cell">31台</td><td class="age-cell age-old">155天</td></tr><tr><td class="model-cell">iPhone 17 全网通5G版<br><small style="color:#8E8E93">白色 256GB 标准版</small></td><td class="count-cell">31台</td><td class="age-cell age-old">140天</td></tr><tr><td class="model-cell">Apple Watch Series 11 智能手表 铝金属系列 GPS版<br><small style="color:#8E8E93">亮黑色表壳+黑色运动型表带M/L 46毫米</small></td><td class="count-cell">16台</td><td class="age-cell age-old">131天</td></tr><tr><td class="model-cell">iPhone 17 全网通5G版<br><small style="color:#8E8E93">黑色 256GB 标准版</small></td><td class="count-cell">24台</td><td class="age-cell age-old">124天</td></tr><tr><td class="model-cell">iPhone 17 Pro Max 全网通5G版<br><small style="color:#8E8E93">银色 512GB 标准版</small></td><td class="count-cell">22台</td><td class="age-cell age-old">111天</td></tr><tr><td class="model-cell">iPhone 17 全网通5G版<br><small style="color:#8E8E93">薰衣草紫色 256GB 标准版</small></td><td class="count-cell">22台</td><td class="age-cell age-old">108天</td></tr><tr><td class="model-cell">Apple Watch Series 11 智能手表 铝金属系列 GPS版<br><small style="color:#8E8E93">玫瑰金色表壳+淡桃粉色运动型表带S/M 42毫米</small></td><td class="count-cell">15台</td><td class="age-cell age-old">104天</td></tr><tr><td class="model-cell">Apple Watch Series 11 智能手表 铝金属系列 GPS版<br><small style="color:#8E8E93">亮黑色表壳+黑色运动型表带S/M 42毫米</small></td><td class="count-cell">14台</td><td class="age-cell age-old">104天</td></tr><tr><td class="model-cell">Apple Watch Series 11 智能手表 铝金属系列 GPS版<br><small style="color:#8E8E93">亮黑色表壳+黑色运动型表带S/M 46毫米</small></td><td class="count-cell">4台</td><td class="age-cell age-old">103天</td></tr><tr><td class="model-cell">Apple Watch Series 11 智能手表 铝金属系列 GPS版<br><small style="color:#8E8E93">深空灰色铝金属表壳+黑色运动型表带S/M 42毫米</small></td><td class="count-cell">12台</td><td class="age-cell age-old">94天</td></tr><tr><td class="model-cell">iPhone 17 Pro Max 全网通5G版<br><small style="color:#8E8E93">星宇橙色 256GB 标准版</small></td><td class="count-cell">18台</td><td class="age-cell age-old">83天</td></tr><tr><td class="model-cell">iPad Pro 2025款/第8代 11英寸 WiFi版<br><small style="color:#8E8E93">银色 256GB 标准玻璃版</small></td><td class="count-cell">5台</td><td class="age-cell age-old">83天</td></tr><tr><td class="model-cell">Apple Watch Series 11 智能手表 铝金属系列 GPS版<br><small style="color:#8E8E93">银色铝金属表壳+雾紫色运动型表带M/L 42毫米</small></td><td class="count-cell">1台</td><td class="age-cell age-old">78天</td></tr><tr><td class="model-cell">Apple Watch Series 11 智能手表 铝金属系列 GPS版<br><small style="color:#8E8E93">银色铝金属表壳+雾紫色运动型表带M/L 46毫米</small></td><td class="count-cell">3台</td><td class="age-cell age-old">75天</td></tr><tr><td class="model-cell">Apple Watch SE 3 2025款 智能手表 铝金属系列 GPS版+蜂窝数据版<br><small style="color:#8E8E93">午夜色表壳+午夜色运动型表带M/L 44毫米</small></td><td class="count-cell">1台</td><td class="age-cell age-old">73天</td></tr><tr><td class="model-cell">Apple Watch SE 3 2025款 智能手表 铝金属系列 GPS版<br><small style="color:#8E8E93">午夜色表壳+午夜色运动型表带S/M 40毫米</small></td><td class="count-cell">1台</td><td class="age-cell age-old">72天</td></tr></tbody></table>
+  <div class="category-section">
+<div class="category-header" style="border-left:5px solid #FF453A">
+<span class="cat-icon">🔴</span><span class="cat-name">老品预警（库龄≥30天，优先推售）</span><span class="cat-count" style="background:#FF453A">36条</span>
 </div>
+<div class="products-grid">
+<table class="detail-table" style="margin:0"><thead><tr><th>产品/型号</th><th>库存</th><th>最长库龄</th></tr></thead>
+<tbody><tr><td class="model-cell">Watch SE 2024款 智能手表 铝金属系列 GPS版<br><small style="color:#8E8E93">午夜色表壳+午夜色运动型表带M/L 44毫米</small></td><td class="count-cell">2台</td><td class="age-cell age-old">262天</td></tr><tr><td class="model-cell">iPhone 16 全网通5G版<br><small style="color:#8E8E93">白色 128GB 标准版</small></td><td class="count-cell">1台</td><td class="age-cell age-old">240天</td></tr><tr><td class="model-cell">Watch Series 11 智能手表 铝金属系列 GPS版<br><small style="color:#8E8E93">玫瑰金色表壳+淡桃粉色运动型表带M/L 46毫米</small></td><td class="count-cell">3台</td><td class="age-cell age-old">220天</td></tr><tr><td class="model-cell">iPhone 17 Pro 全网通5G版<br><small style="color:#8E8E93">星宇橙色 256GB 标准版</small></td><td class="count-cell">17台</td><td class="age-cell age-old">163天</td></tr><tr><td class="model-cell">iPhone 17 Pro Max 全网通5G版<br><small style="color:#8E8E93">银色 256GB 标准版</small></td><td class="count-cell">31台</td><td class="age-cell age-old">156天</td></tr></tbody>
+</table></div></div>
   <div class="category-section" data-cat="智能手机">
 <div class="category-header" style="border-left:5px solid #007AFF">
-<span class="cat-icon">📱</span><span class="cat-name">智能手机</span><span class="cat-count" style="background:#007AFF">302台</span>
+<span class="cat-icon">📱</span><span class="cat-name">智能手机</span><span class="cat-count" style="background:#007AFF">301台</span>
 </div>
 <div class="products-grid"><div class="product-card" onclick="toggleDetail(this)">
 <div class="product-header">
@@ -113,31 +104,31 @@ body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif;backg
 </div>
 <div class="product-detail" style="display:none">
 <table class="detail-table"><thead><tr><th>型号规格</th><th>库存</th><th>最长库龄</th></tr></thead>
-<tbody><tr><td class="model-cell" title="白色 128GB 标准版">白色 128GB 标准版</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-old">239天</td></tr></tbody></table>
+<tbody><tr><td class="model-cell" title="白色 128GB 标准版">白色 128GB 标准版</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-old">240天</td></tr></tbody></table>
 </div></div><div class="product-card" onclick="toggleDetail(this)">
 <div class="product-header">
 <div class="product-title"><span class="product-name">iPhone 17 Pro Max 全网通5G版</span><span class="product-count" style="background:#007AFF">97台</span></div>
-<div class="product-meta"><span class="mini-badge normal-b">7新货</span><span class="mini-badge slow-b">⚠73注意</span><span class="mini-badge flaw-b">🔴17老品</span></div>
+<div class="product-meta"><span class="mini-badge normal-b">2新货</span><span class="mini-badge slow-b">⚠78注意</span><span class="mini-badge flaw-b">🔴17老品</span></div>
 </div>
 <div class="product-detail" style="display:none">
 <table class="detail-table"><thead><tr><th>型号规格</th><th>库存</th><th>最长库龄</th></tr></thead>
-<tbody><tr><td class="model-cell" title="星宇橙色 256GB 标准版">星宇橙色 256GB 标准版</td><td class="count-cell"><strong>18</strong></td><td class="age-cell age-old">83天</td></tr><tr><td class="model-cell" title="星宇橙色 512GB 标准版">星宇橙色 512GB 标准版</td><td class="count-cell"><strong>15</strong></td><td class="age-cell age-warn">19天</td></tr><tr><td class="model-cell" title="深蓝色 256GB 标准版">深蓝色 256GB 标准版</td><td class="count-cell"><strong>9</strong></td><td class="age-cell age-warn">26天</td></tr><tr><td class="model-cell" title="深蓝色 512GB 标准版">深蓝色 512GB 标准版</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-new">13天</td></tr><tr><td class="model-cell" title="银色 1TB 标准版">银色 1TB 标准版</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-new">5天</td></tr><tr><td class="model-cell" title="银色 256GB 标准版">银色 256GB 标准版</td><td class="count-cell"><strong>31</strong></td><td class="age-cell age-old">155天</td></tr><tr><td class="model-cell" title="银色 512GB 标准版">银色 512GB 标准版</td><td class="count-cell"><strong>22</strong></td><td class="age-cell age-old">111天</td></tr></tbody></table>
+<tbody><tr><td class="model-cell" title="星宇橙色 256GB 标准版">星宇橙色 256GB 标准版</td><td class="count-cell"><strong>18</strong></td><td class="age-cell age-old">84天</td></tr><tr><td class="model-cell" title="星宇橙色 512GB 标准版">星宇橙色 512GB 标准版</td><td class="count-cell"><strong>15</strong></td><td class="age-cell age-warn">20天</td></tr><tr><td class="model-cell" title="深蓝色 256GB 标准版">深蓝色 256GB 标准版</td><td class="count-cell"><strong>9</strong></td><td class="age-cell age-warn">27天</td></tr><tr><td class="model-cell" title="深蓝色 512GB 标准版">深蓝色 512GB 标准版</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-new">14天</td></tr><tr><td class="model-cell" title="银色 1TB 标准版">银色 1TB 标准版</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-new">6天</td></tr><tr><td class="model-cell" title="银色 256GB 标准版">银色 256GB 标准版</td><td class="count-cell"><strong>31</strong></td><td class="age-cell age-old">156天</td></tr><tr><td class="model-cell" title="银色 512GB 标准版">银色 512GB 标准版</td><td class="count-cell"><strong>22</strong></td><td class="age-cell age-old">112天</td></tr></tbody></table>
 </div></div><div class="product-card" onclick="toggleDetail(this)">
 <div class="product-header">
 <div class="product-title"><span class="product-name">iPhone 17 Pro 全网通5G版</span><span class="product-count" style="background:#007AFF">68台</span></div>
-<div class="product-meta"><span class="mini-badge normal-b">46新货</span><span class="mini-badge slow-b">⚠16注意</span><span class="mini-badge flaw-b">🔴6老品</span></div>
+<div class="product-meta"><span class="mini-badge normal-b">46新货</span><span class="mini-badge slow-b">⚠7注意</span><span class="mini-badge flaw-b">🔴15老品</span></div>
 </div>
 <div class="product-detail" style="display:none">
 <table class="detail-table"><thead><tr><th>型号规格</th><th>库存</th><th>最长库龄</th></tr></thead>
-<tbody><tr><td class="model-cell" title="星宇橙色 256GB 标准版">星宇橙色 256GB 标准版</td><td class="count-cell"><strong>17</strong></td><td class="age-cell age-old">162天</td></tr><tr><td class="model-cell" title="星宇橙色 512GB 标准版">星宇橙色 512GB 标准版</td><td class="count-cell"><strong>4</strong></td><td class="age-cell age-warn">19天</td></tr><tr><td class="model-cell" title="深蓝色 256GB 标准版">深蓝色 256GB 标准版</td><td class="count-cell"><strong>5</strong></td><td class="age-cell age-old">69天</td></tr><tr><td class="model-cell" title="深蓝色 512GB 标准版">深蓝色 512GB 标准版</td><td class="count-cell"><strong>2</strong></td><td class="age-cell age-new">2天</td></tr><tr><td class="model-cell" title="银色 256GB 标准版">银色 256GB 标准版</td><td class="count-cell"><strong>25</strong></td><td class="age-cell age-old">38天</td></tr><tr><td class="model-cell" title="银色 512GB 标准版">银色 512GB 标准版</td><td class="count-cell"><strong>15</strong></td><td class="age-cell age-warn">15天</td></tr></tbody></table>
+<tbody><tr><td class="model-cell" title="星宇橙色 256GB 标准版">星宇橙色 256GB 标准版</td><td class="count-cell"><strong>17</strong></td><td class="age-cell age-old">163天</td></tr><tr><td class="model-cell" title="星宇橙色 512GB 标准版">星宇橙色 512GB 标准版</td><td class="count-cell"><strong>4</strong></td><td class="age-cell age-warn">21天</td></tr><tr><td class="model-cell" title="深蓝色 256GB 标准版">深蓝色 256GB 标准版</td><td class="count-cell"><strong>5</strong></td><td class="age-cell age-old">70天</td></tr><tr><td class="model-cell" title="深蓝色 512GB 标准版">深蓝色 512GB 标准版</td><td class="count-cell"><strong>2</strong></td><td class="age-cell age-new">3天</td></tr><tr><td class="model-cell" title="银色 256GB 标准版">银色 256GB 标准版</td><td class="count-cell"><strong>25</strong></td><td class="age-cell age-old">39天</td></tr><tr><td class="model-cell" title="银色 512GB 标准版">银色 512GB 标准版</td><td class="count-cell"><strong>15</strong></td><td class="age-cell age-warn">16天</td></tr></tbody></table>
 </div></div><div class="product-card" onclick="toggleDetail(this)">
 <div class="product-header">
-<div class="product-title"><span class="product-name">iPhone 17 全网通5G版</span><span class="product-count" style="background:#007AFF">96台</span></div>
-<div class="product-meta"><span class="mini-badge normal-b">41新货</span><span class="mini-badge slow-b">⚠3注意</span><span class="mini-badge flaw-b">🔴52老品</span></div>
+<div class="product-title"><span class="product-name">iPhone 17 全网通5G版</span><span class="product-count" style="background:#007AFF">95台</span></div>
+<div class="product-meta"><span class="mini-badge normal-b">21新货</span><span class="mini-badge slow-b">⚠22注意</span><span class="mini-badge flaw-b">🔴52老品</span></div>
 </div>
 <div class="product-detail" style="display:none">
 <table class="detail-table"><thead><tr><th>型号规格</th><th>库存</th><th>最长库龄</th></tr></thead>
-<tbody><tr><td class="model-cell" title="白色 256GB 标准版">白色 256GB 标准版</td><td class="count-cell"><strong>31</strong></td><td class="age-cell age-old">140天</td></tr><tr><td class="model-cell" title="白色 512GB 标准版">白色 512GB 标准版</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-new">13天</td></tr><tr><td class="model-cell" title="薰衣草紫色 256GB 标准版">薰衣草紫色 256GB 标准版</td><td class="count-cell"><strong>22</strong></td><td class="age-cell age-old">108天</td></tr><tr><td class="model-cell" title="薰衣草紫色 512GB 标准版">薰衣草紫色 512GB 标准版</td><td class="count-cell"><strong>2</strong></td><td class="age-cell age-new">14天</td></tr><tr><td class="model-cell" title="青雾蓝色 256GB 标准版">青雾蓝色 256GB 标准版</td><td class="count-cell"><strong>9</strong></td><td class="age-cell age-old">63天</td></tr><tr><td class="model-cell" title="黑色 256GB 标准版">黑色 256GB 标准版</td><td class="count-cell"><strong>24</strong></td><td class="age-cell age-old">124天</td></tr><tr><td class="model-cell" title="鼠尾草绿色 256GB 标准版">鼠尾草绿色 256GB 标准版</td><td class="count-cell"><strong>7</strong></td><td class="age-cell age-old">41天</td></tr></tbody></table>
+<tbody><tr><td class="model-cell" title="白色 256GB 标准版">白色 256GB 标准版</td><td class="count-cell"><strong>30</strong></td><td class="age-cell age-old">141天</td></tr><tr><td class="model-cell" title="白色 512GB 标准版">白色 512GB 标准版</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-new">14天</td></tr><tr><td class="model-cell" title="薰衣草紫色 256GB 标准版">薰衣草紫色 256GB 标准版</td><td class="count-cell"><strong>22</strong></td><td class="age-cell age-old">109天</td></tr><tr><td class="model-cell" title="薰衣草紫色 512GB 标准版">薰衣草紫色 512GB 标准版</td><td class="count-cell"><strong>2</strong></td><td class="age-cell age-warn">15天</td></tr><tr><td class="model-cell" title="青雾蓝色 256GB 标准版">青雾蓝色 256GB 标准版</td><td class="count-cell"><strong>9</strong></td><td class="age-cell age-old">64天</td></tr><tr><td class="model-cell" title="黑色 256GB 标准版">黑色 256GB 标准版</td><td class="count-cell"><strong>24</strong></td><td class="age-cell age-old">125天</td></tr><tr><td class="model-cell" title="鼠尾草绿色 256GB 标准版">鼠尾草绿色 256GB 标准版</td><td class="count-cell"><strong>7</strong></td><td class="age-cell age-old">42天</td></tr></tbody></table>
 </div></div><div class="product-card" onclick="toggleDetail(this)">
 <div class="product-header">
 <div class="product-title"><span class="product-name">iPhone 17e 全网通5G版</span><span class="product-count" style="background:#007AFF">12台</span></div>
@@ -145,19 +136,19 @@ body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif;backg
 </div>
 <div class="product-detail" style="display:none">
 <table class="detail-table"><thead><tr><th>型号规格</th><th>库存</th><th>最长库龄</th></tr></thead>
-<tbody><tr><td class="model-cell" title="浅粉色 256GB 标准版">浅粉色 256GB 标准版</td><td class="count-cell"><strong>2</strong></td><td class="age-cell age-new">11天</td></tr><tr><td class="model-cell" title="白色 256GB 标准版">白色 256GB 标准版</td><td class="count-cell"><strong>5</strong></td><td class="age-cell age-new">11天</td></tr><tr><td class="model-cell" title="黑色 256GB 标准版">黑色 256GB 标准版</td><td class="count-cell"><strong>5</strong></td><td class="age-cell age-old">43天</td></tr></tbody></table>
+<tbody><tr><td class="model-cell" title="浅粉色 256GB 标准版">浅粉色 256GB 标准版</td><td class="count-cell"><strong>2</strong></td><td class="age-cell age-new">12天</td></tr><tr><td class="model-cell" title="白色 256GB 标准版">白色 256GB 标准版</td><td class="count-cell"><strong>5</strong></td><td class="age-cell age-new">12天</td></tr><tr><td class="model-cell" title="黑色 256GB 标准版">黑色 256GB 标准版</td><td class="count-cell"><strong>5</strong></td><td class="age-cell age-old">44天</td></tr></tbody></table>
 </div></div><div class="product-card" onclick="toggleDetail(this)">
 <div class="product-header">
 <div class="product-title"><span class="product-name">iPhone Air 全网通5G版</span><span class="product-count" style="background:#007AFF">28台</span></div>
-<div class="product-meta"><span class="mini-badge normal-b">27新货</span><span class="mini-badge flaw-b">🔴1老品</span></div>
+<div class="product-meta"><span class="mini-badge normal-b">10新货</span><span class="mini-badge slow-b">⚠17注意</span><span class="mini-badge flaw-b">🔴1老品</span></div>
 </div>
 <div class="product-detail" style="display:none">
 <table class="detail-table"><thead><tr><th>型号规格</th><th>库存</th><th>最长库龄</th></tr></thead>
-<tbody><tr><td class="model-cell" title="云白色 256GB 标准版">云白色 256GB 标准版</td><td class="count-cell"><strong>5</strong></td><td class="age-cell age-new">14天</td></tr><tr><td class="model-cell" title="天蓝色 256GB 标准版">天蓝色 256GB 标准版</td><td class="count-cell"><strong>7</strong></td><td class="age-cell age-new">14天</td></tr><tr><td class="model-cell" title="浅金色 256GB 标准版">浅金色 256GB 标准版</td><td class="count-cell"><strong>10</strong></td><td class="age-cell age-new">13天</td></tr><tr><td class="model-cell" title="深空黑色 256GB 标准版">深空黑色 256GB 标准版</td><td class="count-cell"><strong>6</strong></td><td class="age-cell age-old">38天</td></tr></tbody></table>
+<tbody><tr><td class="model-cell" title="云白色 256GB 标准版">云白色 256GB 标准版</td><td class="count-cell"><strong>5</strong></td><td class="age-cell age-warn">15天</td></tr><tr><td class="model-cell" title="天蓝色 256GB 标准版">天蓝色 256GB 标准版</td><td class="count-cell"><strong>7</strong></td><td class="age-cell age-warn">15天</td></tr><tr><td class="model-cell" title="浅金色 256GB 标准版">浅金色 256GB 标准版</td><td class="count-cell"><strong>10</strong></td><td class="age-cell age-new">14天</td></tr><tr><td class="model-cell" title="深空黑色 256GB 标准版">深空黑色 256GB 标准版</td><td class="count-cell"><strong>6</strong></td><td class="age-cell age-old">39天</td></tr></tbody></table>
 </div></div></div>
 </div><div class="category-section" data-cat="平板电脑">
 <div class="category-header" style="border-left:5px solid #34C759">
-<span class="cat-icon">📲</span><span class="cat-name">平板电脑</span><span class="cat-count" style="background:#34C759">66台</span>
+<span class="cat-icon">📲</span><span class="cat-name">平板电脑</span><span class="cat-count" style="background:#34C759">64台</span>
 </div>
 <div class="products-grid"><div class="product-card" onclick="toggleDetail(this)">
 <div class="product-header">
@@ -166,15 +157,15 @@ body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif;backg
 </div>
 <div class="product-detail" style="display:none">
 <table class="detail-table"><thead><tr><th>型号规格</th><th>库存</th><th>最长库龄</th></tr></thead>
-<tbody><tr><td class="model-cell" title="星光色 128GB 标准版">星光色 128GB 标准版</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-old">43天</td></tr><tr><td class="model-cell" title="星光色 256GB 标准版">星光色 256GB 标准版</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-old">43天</td></tr><tr><td class="model-cell" title="深空灰色 128GB 标准版">深空灰色 128GB 标准版</td><td class="count-cell"><strong>5</strong></td><td class="age-cell age-old">45天</td></tr><tr><td class="model-cell" title="深空灰色 256GB 标准版">深空灰色 256GB 标准版</td><td class="count-cell"><strong>12</strong></td><td class="age-cell age-old">45天</td></tr><tr><td class="model-cell" title="紫色 128GB 标准版">紫色 128GB 标准版</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-old">43天</td></tr><tr><td class="model-cell" title="蓝色 256GB 标准版">蓝色 256GB 标准版</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-old">42天</td></tr></tbody></table>
+<tbody><tr><td class="model-cell" title="星光色 128GB 标准版">星光色 128GB 标准版</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-old">44天</td></tr><tr><td class="model-cell" title="星光色 256GB 标准版">星光色 256GB 标准版</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-old">44天</td></tr><tr><td class="model-cell" title="深空灰色 128GB 标准版">深空灰色 128GB 标准版</td><td class="count-cell"><strong>5</strong></td><td class="age-cell age-old">46天</td></tr><tr><td class="model-cell" title="深空灰色 256GB 标准版">深空灰色 256GB 标准版</td><td class="count-cell"><strong>12</strong></td><td class="age-cell age-old">46天</td></tr><tr><td class="model-cell" title="紫色 128GB 标准版">紫色 128GB 标准版</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-old">44天</td></tr><tr><td class="model-cell" title="蓝色 256GB 标准版">蓝色 256GB 标准版</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-old">43天</td></tr></tbody></table>
 </div></div><div class="product-card" onclick="toggleDetail(this)">
 <div class="product-header">
-<div class="product-title"><span class="product-name">iPad 2025款/第11代 11英寸 WiFi版</span><span class="product-count" style="background:#34C759">33台</span></div>
-<div class="product-meta"><span class="mini-badge normal-b">18新货</span><span class="mini-badge slow-b">⚠15注意</span></div>
+<div class="product-title"><span class="product-name">iPad 2025款/第11代 11英寸 WiFi版</span><span class="product-count" style="background:#34C759">32台</span></div>
+<div class="product-meta"><span class="mini-badge normal-b">10新货</span><span class="mini-badge slow-b">⚠22注意</span></div>
 </div>
 <div class="product-detail" style="display:none">
 <table class="detail-table"><thead><tr><th>型号规格</th><th>库存</th><th>最长库龄</th></tr></thead>
-<tbody><tr><td class="model-cell" title="粉色 128GB 标准版">粉色 128GB 标准版</td><td class="count-cell"><strong>6</strong></td><td class="age-cell age-warn">16天</td></tr><tr><td class="model-cell" title="粉色 256GB 标准版">粉色 256GB 标准版</td><td class="count-cell"><strong>4</strong></td><td class="age-cell age-new">14天</td></tr><tr><td class="model-cell" title="蓝色 128GB 标准版">蓝色 128GB 标准版</td><td class="count-cell"><strong>3</strong></td><td class="age-cell age-new">9天</td></tr><tr><td class="model-cell" title="蓝色 256GB 标准版">蓝色 256GB 标准版</td><td class="count-cell"><strong>3</strong></td><td class="age-cell age-warn">18天</td></tr><tr><td class="model-cell" title="银色 128GB 标准版">银色 128GB 标准版</td><td class="count-cell"><strong>8</strong></td><td class="age-cell age-warn">18天</td></tr><tr><td class="model-cell" title="银色 256GB 标准版">银色 256GB 标准版</td><td class="count-cell"><strong>9</strong></td><td class="age-cell age-warn">19天</td></tr></tbody></table>
+<tbody><tr><td class="model-cell" title="粉色 128GB 标准版">粉色 128GB 标准版</td><td class="count-cell"><strong>6</strong></td><td class="age-cell age-warn">17天</td></tr><tr><td class="model-cell" title="粉色 256GB 标准版">粉色 256GB 标准版</td><td class="count-cell"><strong>4</strong></td><td class="age-cell age-warn">15天</td></tr><tr><td class="model-cell" title="蓝色 128GB 标准版">蓝色 128GB 标准版</td><td class="count-cell"><strong>3</strong></td><td class="age-cell age-new">10天</td></tr><tr><td class="model-cell" title="蓝色 256GB 标准版">蓝色 256GB 标准版</td><td class="count-cell"><strong>3</strong></td><td class="age-cell age-warn">19天</td></tr><tr><td class="model-cell" title="银色 128GB 标准版">银色 128GB 标准版</td><td class="count-cell"><strong>8</strong></td><td class="age-cell age-warn">20天</td></tr><tr><td class="model-cell" title="银色 256GB 标准版">银色 256GB 标准版</td><td class="count-cell"><strong>8</strong></td><td class="age-cell age-warn">20天</td></tr></tbody></table>
 </div></div><div class="product-card" onclick="toggleDetail(this)">
 <div class="product-header">
 <div class="product-title"><span class="product-name">iPad Air 2026款/第8代 13英寸 WiFi版</span><span class="product-count" style="background:#34C759">1台</span></div>
@@ -182,7 +173,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif;backg
 </div>
 <div class="product-detail" style="display:none">
 <table class="detail-table"><thead><tr><th>型号规格</th><th>库存</th><th>最长库龄</th></tr></thead>
-<tbody><tr><td class="model-cell" title="深空灰色 256GB">深空灰色 256GB</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-warn">24天</td></tr></tbody></table>
+<tbody><tr><td class="model-cell" title="深空灰色 256GB">深空灰色 256GB</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-warn">25天</td></tr></tbody></table>
 </div></div><div class="product-card" onclick="toggleDetail(this)">
 <div class="product-header">
 <div class="product-title"><span class="product-name">iPad Pro 2025款/第8代 11英寸 WiFi版</span><span class="product-count" style="background:#34C759">7台</span></div>
@@ -190,15 +181,15 @@ body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif;backg
 </div>
 <div class="product-detail" style="display:none">
 <table class="detail-table"><thead><tr><th>型号规格</th><th>库存</th><th>最长库龄</th></tr></thead>
-<tbody><tr><td class="model-cell" title="深空黑色 256GB 标准玻璃版">深空黑色 256GB 标准玻璃版</td><td class="count-cell"><strong>2</strong></td><td class="age-cell age-old">52天</td></tr><tr><td class="model-cell" title="银色 256GB 标准玻璃版">银色 256GB 标准玻璃版</td><td class="count-cell"><strong>5</strong></td><td class="age-cell age-old">83天</td></tr></tbody></table>
+<tbody><tr><td class="model-cell" title="深空黑色 256GB 标准玻璃版">深空黑色 256GB 标准玻璃版</td><td class="count-cell"><strong>2</strong></td><td class="age-cell age-old">53天</td></tr><tr><td class="model-cell" title="银色 256GB 标准玻璃版">银色 256GB 标准玻璃版</td><td class="count-cell"><strong>5</strong></td><td class="age-cell age-old">84天</td></tr></tbody></table>
 </div></div><div class="product-card" onclick="toggleDetail(this)">
 <div class="product-header">
-<div class="product-title"><span class="product-name">iPad Pro 2025款/第8代 13英寸 WiFi版</span><span class="product-count" style="background:#34C759">2台</span></div>
-<div class="product-meta"><span class="mini-badge normal-b">2新货</span></div>
+<div class="product-title"><span class="product-name">iPad Pro 2025款/第8代 13英寸 WiFi版</span><span class="product-count" style="background:#34C759">1台</span></div>
+<div class="product-meta"><span class="mini-badge normal-b">1新货</span></div>
 </div>
 <div class="product-detail" style="display:none">
 <table class="detail-table"><thead><tr><th>型号规格</th><th>库存</th><th>最长库龄</th></tr></thead>
-<tbody><tr><td class="model-cell" title="深空黑色 256GB 标准玻璃版">深空黑色 256GB 标准玻璃版</td><td class="count-cell"><strong>2</strong></td><td class="age-cell age-new">13天</td></tr></tbody></table>
+<tbody><tr><td class="model-cell" title="深空黑色 256GB 标准玻璃版">深空黑色 256GB 标准玻璃版</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-new">11天</td></tr></tbody></table>
 </div></div><div class="product-card" onclick="toggleDetail(this)">
 <div class="product-header">
 <div class="product-title"><span class="product-name">iPad mini 2024款/第7代 8.3英寸 WiFi版</span><span class="product-count" style="background:#34C759">2台</span></div>
@@ -206,11 +197,11 @@ body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif;backg
 </div>
 <div class="product-detail" style="display:none">
 <table class="detail-table"><thead><tr><th>型号规格</th><th>库存</th><th>最长库龄</th></tr></thead>
-<tbody><tr><td class="model-cell" title="深空灰色 128GB">深空灰色 128GB</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-new">9天</td></tr><tr><td class="model-cell" title="紫色 128GB">紫色 128GB</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-new">5天</td></tr></tbody></table>
+<tbody><tr><td class="model-cell" title="深空灰色 128GB">深空灰色 128GB</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-new">10天</td></tr><tr><td class="model-cell" title="紫色 128GB">紫色 128GB</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-new">6天</td></tr></tbody></table>
 </div></div></div>
 </div><div class="category-section" data-cat="智能手表">
 <div class="category-header" style="border-left:5px solid #FF9500">
-<span class="cat-icon">⌚</span><span class="cat-name">智能手表</span><span class="cat-count" style="background:#FF9500">152台</span>
+<span class="cat-icon">⌚</span><span class="cat-name">智能手表</span><span class="cat-count" style="background:#FF9500">151台</span>
 </div>
 <div class="products-grid"><div class="product-card" onclick="toggleDetail(this)">
 <div class="product-header">
@@ -219,15 +210,15 @@ body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif;backg
 </div>
 <div class="product-detail" style="display:none">
 <table class="detail-table"><thead><tr><th>型号规格</th><th>库存</th><th>最长库龄</th></tr></thead>
-<tbody><tr><td class="model-cell" title="午夜色表壳+午夜色运动型表带M/L 44毫米">午夜色表壳+午夜色运动型表带M/L 44毫米</td><td class="count-cell"><strong>2</strong></td><td class="age-cell age-old">261天</td></tr></tbody></table>
+<tbody><tr><td class="model-cell" title="午夜色表壳+午夜色运动型表带M/L 44毫米">午夜色表壳+午夜色运动型表带M/L 44毫米</td><td class="count-cell"><strong>2</strong></td><td class="age-cell age-old">262天</td></tr></tbody></table>
 </div></div><div class="product-card" onclick="toggleDetail(this)">
 <div class="product-header">
 <div class="product-title"><span class="product-name">Apple Watch SE 3 2025款 智能手表 铝金属系列 GPS版</span><span class="product-count" style="background:#FF9500">11台</span></div>
-<div class="product-meta"><span class="mini-badge normal-b">10新货</span><span class="mini-badge flaw-b">🔴1老品</span></div>
+<div class="product-meta"><span class="mini-badge normal-b">4新货</span><span class="mini-badge slow-b">⚠6注意</span><span class="mini-badge flaw-b">🔴1老品</span></div>
 </div>
 <div class="product-detail" style="display:none">
 <table class="detail-table"><thead><tr><th>型号规格</th><th>库存</th><th>最长库龄</th></tr></thead>
-<tbody><tr><td class="model-cell" title="午夜色表壳+午夜色运动型表带M/L 44毫米">午夜色表壳+午夜色运动型表带M/L 44毫米</td><td class="count-cell"><strong>4</strong></td><td class="age-cell age-new">11天</td></tr><tr><td class="model-cell" title="午夜色表壳+午夜色运动型表带S/M 40毫米">午夜色表壳+午夜色运动型表带S/M 40毫米</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-old">72天</td></tr><tr><td class="model-cell" title="星光色表壳+星光色运动型表带M/L 44毫米">星光色表壳+星光色运动型表带M/L 44毫米</td><td class="count-cell"><strong>2</strong></td><td class="age-cell age-new">14天</td></tr><tr><td class="model-cell" title="星光色表壳+星光色运动型表带S/M 40毫米">星光色表壳+星光色运动型表带S/M 40毫米</td><td class="count-cell"><strong>4</strong></td><td class="age-cell age-new">14天</td></tr></tbody></table>
+<tbody><tr><td class="model-cell" title="午夜色表壳+午夜色运动型表带M/L 44毫米">午夜色表壳+午夜色运动型表带M/L 44毫米</td><td class="count-cell"><strong>4</strong></td><td class="age-cell age-new">12天</td></tr><tr><td class="model-cell" title="午夜色表壳+午夜色运动型表带S/M 40毫米">午夜色表壳+午夜色运动型表带S/M 40毫米</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-old">73天</td></tr><tr><td class="model-cell" title="星光色表壳+星光色运动型表带M/L 44毫米">星光色表壳+星光色运动型表带M/L 44毫米</td><td class="count-cell"><strong>2</strong></td><td class="age-cell age-warn">15天</td></tr><tr><td class="model-cell" title="星光色表壳+星光色运动型表带S/M 40毫米">星光色表壳+星光色运动型表带S/M 40毫米</td><td class="count-cell"><strong>4</strong></td><td class="age-cell age-warn">15天</td></tr></tbody></table>
 </div></div><div class="product-card" onclick="toggleDetail(this)">
 <div class="product-header">
 <div class="product-title"><span class="product-name">Apple Watch SE 3 2025款 智能手表 铝金属系列 GPS版+蜂窝数据版</span><span class="product-count" style="background:#FF9500">6台</span></div>
@@ -235,35 +226,35 @@ body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif;backg
 </div>
 <div class="product-detail" style="display:none">
 <table class="detail-table"><thead><tr><th>型号规格</th><th>库存</th><th>最长库龄</th></tr></thead>
-<tbody><tr><td class="model-cell" title="午夜色表壳+午夜色运动型表带M/L 44毫米">午夜色表壳+午夜色运动型表带M/L 44毫米</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-old">73天</td></tr><tr><td class="model-cell" title="星光色表壳+星光色运动型表带S/M 40毫米">星光色表壳+星光色运动型表带S/M 40毫米</td><td class="count-cell"><strong>5</strong></td><td class="age-cell age-new">9天</td></tr></tbody></table>
+<tbody><tr><td class="model-cell" title="午夜色表壳+午夜色运动型表带M/L 44毫米">午夜色表壳+午夜色运动型表带M/L 44毫米</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-old">74天</td></tr><tr><td class="model-cell" title="星光色表壳+星光色运动型表带S/M 40毫米">星光色表壳+星光色运动型表带S/M 40毫米</td><td class="count-cell"><strong>5</strong></td><td class="age-cell age-new">10天</td></tr></tbody></table>
 </div></div><div class="product-card" onclick="toggleDetail(this)">
 <div class="product-header">
-<div class="product-title"><span class="product-name">Apple Watch Series 11 智能手表 铝金属系列 GPS版</span><span class="product-count" style="background:#FF9500">121台</span></div>
-<div class="product-meta"><span class="mini-badge normal-b">81新货</span><span class="mini-badge slow-b">⚠11注意</span><span class="mini-badge flaw-b">🔴29老品</span></div>
+<div class="product-title"><span class="product-name">Apple Watch Series 11 智能手表 铝金属系列 GPS版</span><span class="product-count" style="background:#FF9500">120台</span></div>
+<div class="product-meta"><span class="mini-badge normal-b">75新货</span><span class="mini-badge slow-b">⚠16注意</span><span class="mini-badge flaw-b">🔴29老品</span></div>
 </div>
 <div class="product-detail" style="display:none">
 <table class="detail-table"><thead><tr><th>型号规格</th><th>库存</th><th>最长库龄</th></tr></thead>
-<tbody><tr><td class="model-cell" title="亮黑色表壳+黑色运动型表带M/L 42毫米">亮黑色表壳+黑色运动型表带M/L 42毫米</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-warn">16天</td></tr><tr><td class="model-cell" title="亮黑色表壳+黑色运动型表带M/L 46毫米">亮黑色表壳+黑色运动型表带M/L 46毫米</td><td class="count-cell"><strong>16</strong></td><td class="age-cell age-old">131天</td></tr><tr><td class="model-cell" title="亮黑色表壳+黑色运动型表带S/M 42毫米">亮黑色表壳+黑色运动型表带S/M 42毫米</td><td class="count-cell"><strong>14</strong></td><td class="age-cell age-old">104天</td></tr><tr><td class="model-cell" title="亮黑色表壳+黑色运动型表带S/M 46毫米">亮黑色表壳+黑色运动型表带S/M 46毫米</td><td class="count-cell"><strong>4</strong></td><td class="age-cell age-old">103天</td></tr><tr><td class="model-cell" title="深空灰色铝金属表壳+黑色运动型表带M/L 42毫米">深空灰色铝金属表壳+黑色运动型表带M/L 42毫米</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-new">8天</td></tr><tr><td class="model-cell" title="深空灰色铝金属表壳+黑色运动型表带M/L 46毫米">深空灰色铝金属表壳+黑色运动型表带M/L 46毫米</td><td class="count-cell"><strong>14</strong></td><td class="age-cell age-old">41天</td></tr><tr><td class="model-cell" title="深空灰色铝金属表壳+黑色运动型表带S/M 42毫米">深空灰色铝金属表壳+黑色运动型表带S/M 42毫米</td><td class="count-cell"><strong>12</strong></td><td class="age-cell age-old">94天</td></tr><tr><td class="model-cell" title="深空灰色铝金属表壳+黑色运动型表带S/M 46毫米">深空灰色铝金属表壳+黑色运动型表带S/M 46毫米</td><td class="count-cell"><strong>3</strong></td><td class="age-cell age-new">8天</td></tr><tr><td class="model-cell" title="玫瑰金色表壳+淡桃粉色运动型表带M/L 42毫米">玫瑰金色表壳+淡桃粉色运动型表带M/L 42毫米</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-warn">19天</td></tr><tr><td class="model-cell" title="玫瑰金色表壳+淡桃粉色运动型表带M/L 46毫米">玫瑰金色表壳+淡桃粉色运动型表带M/L 46毫米</td><td class="count-cell"><strong>3</strong></td><td class="age-cell age-old">219天</td></tr><tr><td class="model-cell" title="玫瑰金色表壳+淡桃粉色运动型表带S/M 42毫米">玫瑰金色表壳+淡桃粉色运动型表带S/M 42毫米</td><td class="count-cell"><strong>15</strong></td><td class="age-cell age-old">104天</td></tr><tr><td class="model-cell" title="玫瑰金色表壳+淡桃粉色运动型表带S/M 46毫米">玫瑰金色表壳+淡桃粉色运动型表带S/M 46毫米</td><td class="count-cell"><strong>10</strong></td><td class="age-cell age-old">71天</td></tr><tr><td class="model-cell" title="银色铝金属表壳+雾紫色运动型表带M/L 42毫米">银色铝金属表壳+雾紫色运动型表带M/L 42毫米</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-old">78天</td></tr><tr><td class="model-cell" title="银色铝金属表壳+雾紫色运动型表带M/L 46毫米">银色铝金属表壳+雾紫色运动型表带M/L 46毫米</td><td class="count-cell"><strong>3</strong></td><td class="age-cell age-old">75天</td></tr><tr><td class="model-cell" title="银色铝金属表壳+雾紫色运动型表带S/M 42毫米">银色铝金属表壳+雾紫色运动型表带S/M 42毫米</td><td class="count-cell"><strong>22</strong></td><td class="age-cell age-new">14天</td></tr><tr><td class="model-cell" title="银色铝金属表壳+雾紫色运动型表带S/M 46毫米">银色铝金属表壳+雾紫色运动型表带S/M 46毫米</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-new">1天</td></tr></tbody></table>
+<tbody><tr><td class="model-cell" title="亮黑色表壳+黑色运动型表带M/L 42毫米">亮黑色表壳+黑色运动型表带M/L 42毫米</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-warn">17天</td></tr><tr><td class="model-cell" title="亮黑色表壳+黑色运动型表带M/L 46毫米">亮黑色表壳+黑色运动型表带M/L 46毫米</td><td class="count-cell"><strong>16</strong></td><td class="age-cell age-old">133天</td></tr><tr><td class="model-cell" title="亮黑色表壳+黑色运动型表带S/M 42毫米">亮黑色表壳+黑色运动型表带S/M 42毫米</td><td class="count-cell"><strong>14</strong></td><td class="age-cell age-old">105天</td></tr><tr><td class="model-cell" title="亮黑色表壳+黑色运动型表带S/M 46毫米">亮黑色表壳+黑色运动型表带S/M 46毫米</td><td class="count-cell"><strong>4</strong></td><td class="age-cell age-old">104天</td></tr><tr><td class="model-cell" title="深空灰色铝金属表壳+黑色运动型表带M/L 42毫米">深空灰色铝金属表壳+黑色运动型表带M/L 42毫米</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-new">9天</td></tr><tr><td class="model-cell" title="深空灰色铝金属表壳+黑色运动型表带M/L 46毫米">深空灰色铝金属表壳+黑色运动型表带M/L 46毫米</td><td class="count-cell"><strong>14</strong></td><td class="age-cell age-old">42天</td></tr><tr><td class="model-cell" title="深空灰色铝金属表壳+黑色运动型表带S/M 42毫米">深空灰色铝金属表壳+黑色运动型表带S/M 42毫米</td><td class="count-cell"><strong>12</strong></td><td class="age-cell age-old">95天</td></tr><tr><td class="model-cell" title="深空灰色铝金属表壳+黑色运动型表带S/M 46毫米">深空灰色铝金属表壳+黑色运动型表带S/M 46毫米</td><td class="count-cell"><strong>3</strong></td><td class="age-cell age-new">9天</td></tr><tr><td class="model-cell" title="玫瑰金色表壳+淡桃粉色运动型表带M/L 42毫米">玫瑰金色表壳+淡桃粉色运动型表带M/L 42毫米</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-warn">20天</td></tr><tr><td class="model-cell" title="玫瑰金色表壳+淡桃粉色运动型表带M/L 46毫米">玫瑰金色表壳+淡桃粉色运动型表带M/L 46毫米</td><td class="count-cell"><strong>3</strong></td><td class="age-cell age-old">220天</td></tr><tr><td class="model-cell" title="玫瑰金色表壳+淡桃粉色运动型表带S/M 42毫米">玫瑰金色表壳+淡桃粉色运动型表带S/M 42毫米</td><td class="count-cell"><strong>14</strong></td><td class="age-cell age-old">105天</td></tr><tr><td class="model-cell" title="玫瑰金色表壳+淡桃粉色运动型表带S/M 46毫米">玫瑰金色表壳+淡桃粉色运动型表带S/M 46毫米</td><td class="count-cell"><strong>10</strong></td><td class="age-cell age-old">72天</td></tr><tr><td class="model-cell" title="银色铝金属表壳+雾紫色运动型表带M/L 42毫米">银色铝金属表壳+雾紫色运动型表带M/L 42毫米</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-old">79天</td></tr><tr><td class="model-cell" title="银色铝金属表壳+雾紫色运动型表带M/L 46毫米">银色铝金属表壳+雾紫色运动型表带M/L 46毫米</td><td class="count-cell"><strong>3</strong></td><td class="age-cell age-old">76天</td></tr><tr><td class="model-cell" title="银色铝金属表壳+雾紫色运动型表带S/M 42毫米">银色铝金属表壳+雾紫色运动型表带S/M 42毫米</td><td class="count-cell"><strong>22</strong></td><td class="age-cell age-warn">15天</td></tr><tr><td class="model-cell" title="银色铝金属表壳+雾紫色运动型表带S/M 46毫米">银色铝金属表壳+雾紫色运动型表带S/M 46毫米</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-new">2天</td></tr></tbody></table>
 </div></div><div class="product-card" onclick="toggleDetail(this)">
 <div class="product-header">
 <div class="product-title"><span class="product-name">Apple Watch Series 11 智能手表 铝金属系列 GPS版+蜂窝版</span><span class="product-count" style="background:#FF9500">11台</span></div>
-<div class="product-meta"><span class="mini-badge normal-b">11新货</span></div>
+<div class="product-meta"><span class="mini-badge normal-b">7新货</span><span class="mini-badge slow-b">⚠4注意</span></div>
 </div>
 <div class="product-detail" style="display:none">
 <table class="detail-table"><thead><tr><th>型号规格</th><th>库存</th><th>最长库龄</th></tr></thead>
-<tbody><tr><td class="model-cell" title="亮黑色表壳+黑色运动型表带M/L 46毫米">亮黑色表壳+黑色运动型表带M/L 46毫米</td><td class="count-cell"><strong>4</strong></td><td class="age-cell age-new">14天</td></tr><tr><td class="model-cell" title="玫瑰金色表壳+淡桃粉色运动表带S/M 46毫米">玫瑰金色表壳+淡桃粉色运动表带S/M 46毫米</td><td class="count-cell"><strong>3</strong></td><td class="age-cell age-new">5天</td></tr><tr><td class="model-cell" title="玫瑰金色铝金屈表壳+淡桃粉色运动型表带S/M 42毫米">玫瑰金色铝金屈表壳+淡桃粉色运动型表带S/M 42毫米</td><td class="count-cell"><strong>4</strong></td><td class="age-cell age-new">5天</td></tr></tbody></table>
+<tbody><tr><td class="model-cell" title="亮黑色表壳+黑色运动型表带M/L 46毫米">亮黑色表壳+黑色运动型表带M/L 46毫米</td><td class="count-cell"><strong>4</strong></td><td class="age-cell age-warn">15天</td></tr><tr><td class="model-cell" title="玫瑰金色表壳+淡桃粉色运动表带S/M 46毫米">玫瑰金色表壳+淡桃粉色运动表带S/M 46毫米</td><td class="count-cell"><strong>3</strong></td><td class="age-cell age-new">6天</td></tr><tr><td class="model-cell" title="玫瑰金色铝金屈表壳+淡桃粉色运动型表带S/M 42毫米">玫瑰金色铝金屈表壳+淡桃粉色运动型表带S/M 42毫米</td><td class="count-cell"><strong>4</strong></td><td class="age-cell age-new">6天</td></tr></tbody></table>
 </div></div><div class="product-card" onclick="toggleDetail(this)">
 <div class="product-header">
 <div class="product-title"><span class="product-name">Apple Watch Ultra 3 智能手表 钛金属系列 GPS+蜂窝数据版</span><span class="product-count" style="background:#FF9500">1台</span></div>
-<div class="product-meta"><span class="mini-badge normal-b">1新货</span></div>
+<div class="product-meta"><span class="mini-badge slow-b">⚠1注意</span></div>
 </div>
 <div class="product-detail" style="display:none">
 <table class="detail-table"><thead><tr><th>型号规格</th><th>库存</th><th>最长库龄</th></tr></thead>
-<tbody><tr><td class="model-cell" title="原色 铁锚蓝色海洋表带 49毫米">原色 铁锚蓝色海洋表带 49毫米</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-new">14天</td></tr></tbody></table>
+<tbody><tr><td class="model-cell" title="原色 铁锚蓝色海洋表带 49毫米">原色 铁锚蓝色海洋表带 49毫米</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-warn">15天</td></tr></tbody></table>
 </div></div></div>
 </div><div class="category-section" data-cat="笔记本电脑">
 <div class="category-header" style="border-left:5px solid #AF52DE">
-<span class="cat-icon">💻</span><span class="cat-name">笔记本电脑</span><span class="cat-count" style="background:#AF52DE">11台</span>
+<span class="cat-icon">💻</span><span class="cat-name">笔记本电脑</span><span class="cat-count" style="background:#AF52DE">10台</span>
 </div>
 <div class="products-grid"><div class="product-card" onclick="toggleDetail(this)">
 <div class="product-header">
@@ -272,7 +263,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif;backg
 </div>
 <div class="product-detail" style="display:none">
 <table class="detail-table"><thead><tr><th>型号规格</th><th>库存</th><th>最长库龄</th></tr></thead>
-<tbody><tr><td class="model-cell" title="午夜色 16GB+512GB（10核中央处理器+8核图形处理器） 标准版">午夜色 16GB+512GB（10核中央处理器+8核图形处理器） 标准版</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-warn">18天</td></tr><tr><td class="model-cell" title="天蓝色 16GB+1TB（10核中央处理器+10核图形处理器） 标准版">天蓝色 16GB+1TB（10核中央处理器+10核图形处理器） 标准版</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-old">44天</td></tr><tr><td class="model-cell" title="天蓝色 16GB+512GB（10核中央处理器+8核图形处理器） 标准版">天蓝色 16GB+512GB（10核中央处理器+8核图形处理器） 标准版</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-new">1天</td></tr><tr><td class="model-cell" title="星光色 16GB+1TB（10核中央处理器+10核图形处理器） 标准版">星光色 16GB+1TB（10核中央处理器+10核图形处理器） 标准版</td><td class="count-cell"><strong>2</strong></td><td class="age-cell age-new">11天</td></tr><tr><td class="model-cell" title="星光色 16GB+512GB（10核中央处理器+8核图形处理器） 标准版">星光色 16GB+512GB（10核中央处理器+8核图形处理器） 标准版</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-new">10天</td></tr><tr><td class="model-cell" title="银色 16GB+1TB（10核中央处理器+10核图形处理器） 标准版">银色 16GB+1TB（10核中央处理器+10核图形处理器） 标准版</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-warn">27天</td></tr></tbody></table>
+<tbody><tr><td class="model-cell" title="午夜色 16GB+512GB（10核中央处理器+8核图形处理器） 标准版">午夜色 16GB+512GB（10核中央处理器+8核图形处理器） 标准版</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-warn">19天</td></tr><tr><td class="model-cell" title="天蓝色 16GB+1TB（10核中央处理器+10核图形处理器） 标准版">天蓝色 16GB+1TB（10核中央处理器+10核图形处理器） 标准版</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-old">45天</td></tr><tr><td class="model-cell" title="天蓝色 16GB+512GB（10核中央处理器+8核图形处理器） 标准版">天蓝色 16GB+512GB（10核中央处理器+8核图形处理器） 标准版</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-new">2天</td></tr><tr><td class="model-cell" title="星光色 16GB+1TB（10核中央处理器+10核图形处理器） 标准版">星光色 16GB+1TB（10核中央处理器+10核图形处理器） 标准版</td><td class="count-cell"><strong>2</strong></td><td class="age-cell age-new">12天</td></tr><tr><td class="model-cell" title="星光色 16GB+512GB（10核中央处理器+8核图形处理器） 标准版">星光色 16GB+512GB（10核中央处理器+8核图形处理器） 标准版</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-new">12天</td></tr><tr><td class="model-cell" title="银色 16GB+1TB（10核中央处理器+10核图形处理器） 标准版">银色 16GB+1TB（10核中央处理器+10核图形处理器） 标准版</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-warn">28天</td></tr></tbody></table>
 </div></div><div class="product-card" onclick="toggleDetail(this)">
 <div class="product-header">
 <div class="product-title"><span class="product-name">MacBook Air M5版 15.3英寸</span><span class="product-count" style="background:#AF52DE">2台</span></div>
@@ -280,15 +271,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif;backg
 </div>
 <div class="product-detail" style="display:none">
 <table class="detail-table"><thead><tr><th>型号规格</th><th>库存</th><th>最长库龄</th></tr></thead>
-<tbody><tr><td class="model-cell" title="天蓝色 16GB+1TB（10核中央处理器+10核图形处理器） 标准版">天蓝色 16GB+1TB（10核中央处理器+10核图形处理器） 标准版</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-new">5天</td></tr><tr><td class="model-cell" title="星光色 16GB+512GB（10核中央处理器+10核图形处理器） 标准版">星光色 16GB+512GB（10核中央处理器+10核图形处理器） 标准版</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-warn">25天</td></tr></tbody></table>
-</div></div><div class="product-card" onclick="toggleDetail(this)">
-<div class="product-header">
-<div class="product-title"><span class="product-name">MacBook Neo 13英寸</span><span class="product-count" style="background:#AF52DE">1台</span></div>
-<div class="product-meta"><span class="mini-badge normal-b">1新货</span></div>
-</div>
-<div class="product-detail" style="display:none">
-<table class="detail-table"><thead><tr><th>型号规格</th><th>库存</th><th>最长库龄</th></tr></thead>
-<tbody><tr><td class="model-cell" title="靛蓝色 8GB+256GB（6核中央处理器+5核图形处理器） 标准版">靛蓝色 8GB+256GB（6核中央处理器+5核图形处理器） 标准版</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-new">4天</td></tr></tbody></table>
+<tbody><tr><td class="model-cell" title="天蓝色 16GB+1TB（10核中央处理器+10核图形处理器） 标准版">天蓝色 16GB+1TB（10核中央处理器+10核图形处理器） 标准版</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-new">6天</td></tr><tr><td class="model-cell" title="星光色 16GB+512GB（10核中央处理器+10核图形处理器） 标准版">星光色 16GB+512GB（10核中央处理器+10核图形处理器） 标准版</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-warn">26天</td></tr></tbody></table>
 </div></div><div class="product-card" onclick="toggleDetail(this)">
 <div class="product-header">
 <div class="product-title"><span class="product-name">MacBook Pro M5版 14英寸</span><span class="product-count" style="background:#AF52DE">1台</span></div>
@@ -296,7 +279,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif;backg
 </div>
 <div class="product-detail" style="display:none">
 <table class="detail-table"><thead><tr><th>型号规格</th><th>库存</th><th>最长库龄</th></tr></thead>
-<tbody><tr><td class="model-cell" title="银色 24G+1TB（10核中央处理器+10核图形处理器） 标准版">银色 24G+1TB（10核中央处理器+10核图形处理器） 标准版</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-new">1天</td></tr></tbody></table>
+<tbody><tr><td class="model-cell" title="银色 24G+1TB（10核中央处理器+10核图形处理器） 标准版">银色 24G+1TB（10核中央处理器+10核图形处理器） 标准版</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-new">2天</td></tr></tbody></table>
 </div></div></div>
 </div><div class="category-section" data-cat="台式机">
 <div class="category-header" style="border-left:5px solid #FF3B30">
@@ -309,460 +292,39 @@ body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif;backg
 </div>
 <div class="product-detail" style="display:none">
 <table class="detail-table"><thead><tr><th>型号规格</th><th>库存</th><th>最长库龄</th></tr></thead>
-<tbody><tr><td class="model-cell" title="银色 M4 16G+256GB 10核集显">银色 M4 16G+256GB 10核集显</td><td class="count-cell"><strong>2</strong></td><td class="age-cell age-new">10天</td></tr></tbody></table>
+<tbody><tr><td class="model-cell" title="银色 M4 16G+256GB 10核集显">银色 M4 16G+256GB 10核集显</td><td class="count-cell"><strong>2</strong></td><td class="age-cell age-new">11天</td></tr></tbody></table>
 </div></div></div>
-</div><div class="category-section" data-cat="真无线蓝牙耳机">
-<div class="category-header" style="border-left:5px solid #5AC8FA">
-<span class="cat-icon">🎧</span><span class="cat-name">真无线蓝牙耳机</span><span class="cat-count" style="background:#5AC8FA">49台</span>
 </div>
-<div class="products-grid"><div class="product-card" onclick="toggleDetail(this)">
-<div class="product-header">
-<div class="product-title"><span class="product-name">AirPods 4代 无线蓝牙耳机</span><span class="product-count" style="background:#5AC8FA">31台</span></div>
-<div class="product-meta"><span class="mini-badge normal-b">17新货</span><span class="mini-badge flaw-b">🔴14老品</span></div>
-</div>
-<div class="product-detail" style="display:none">
-<table class="detail-table"><thead><tr><th>型号规格</th><th>库存</th><th>最长库龄</th></tr></thead>
-<tbody><tr><td class="model-cell" title="白色">白色</td><td class="count-cell"><strong>5</strong></td><td class="age-cell age-new">4天</td></tr><tr><td class="model-cell" title="白色 主动降噪版">白色 主动降噪版</td><td class="count-cell"><strong>26</strong></td><td class="age-cell age-old">52天</td></tr></tbody></table>
-</div></div><div class="product-card" onclick="toggleDetail(this)">
-<div class="product-header">
-<div class="product-title"><span class="product-name">AirPods Pro 2 主动降噪无线蓝牙耳机</span><span class="product-count" style="background:#5AC8FA">1台</span></div>
-<div class="product-meta"><span class="mini-badge flaw-b">🔴1老品</span></div>
-</div>
-<div class="product-detail" style="display:none">
-<table class="detail-table"><thead><tr><th>型号规格</th><th>库存</th><th>最长库龄</th></tr></thead>
-<tbody><tr><td class="model-cell" title="白色 USB-C版">白色 USB-C版</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-old">836天</td></tr></tbody></table>
-</div></div><div class="product-card" onclick="toggleDetail(this)">
-<div class="product-header">
-<div class="product-title"><span class="product-name">AirPods Pro 3 主动降噪无线蓝牙耳机</span><span class="product-count" style="background:#5AC8FA">11台</span></div>
-<div class="product-meta"><span class="mini-badge normal-b">5新货</span><span class="mini-badge flaw-b">🔴6老品</span></div>
-</div>
-<div class="product-detail" style="display:none">
-<table class="detail-table"><thead><tr><th>型号规格</th><th>库存</th><th>最长库龄</th></tr></thead>
-<tbody><tr><td class="model-cell" title="白色 ]">白色 ]</td><td class="count-cell"><strong>11</strong></td><td class="age-cell age-old">99天</td></tr></tbody></table>
-</div></div><div class="product-card" onclick="toggleDetail(this)">
-<div class="product-header">
-<div class="product-title"><span class="product-name">Beats PowerBeats Pro 2 高性能耳机</span><span class="product-count" style="background:#5AC8FA">2台</span></div>
-<div class="product-meta"><span class="mini-badge flaw-b">🔴2老品</span></div>
-</div>
-<div class="product-detail" style="display:none">
-<table class="detail-table"><thead><tr><th>型号规格</th><th>库存</th><th>最长库龄</th></tr></thead>
-<tbody><tr><td class="model-cell" title="极速黑 MX723CH/A">极速黑 MX723CH/A</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-old">240天</td></tr><tr><td class="model-cell" title="流沙色 MX733CH/A">流沙色 MX733CH/A</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-old">412天</td></tr></tbody></table>
-</div></div><div class="product-card" onclick="toggleDetail(this)">
-<div class="product-header">
-<div class="product-title"><span class="product-name">Beats Powerbeats Fit 无线降噪运动耳机</span><span class="product-count" style="background:#5AC8FA">2台</span></div>
-<div class="product-meta"><span class="mini-badge flaw-b">🔴2老品</span></div>
-</div>
-<div class="product-detail" style="display:none">
-<table class="detail-table"><thead><tr><th>型号规格</th><th>库存</th><th>最长库龄</th></tr></thead>
-<tbody><tr><td class="model-cell" title="极速黑">极速黑</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-old">201天</td></tr><tr><td class="model-cell" title="深砾灰">深砾灰</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-old">201天</td></tr></tbody></table>
-</div></div><div class="product-card" onclick="toggleDetail(this)">
-<div class="product-header">
-<div class="product-title"><span class="product-name">Beats Solo  Buds 蓝牙真无线耳机</span><span class="product-count" style="background:#5AC8FA">2台</span></div>
-<div class="product-meta"><span class="mini-badge flaw-b">🔴2老品</span></div>
-</div>
-<div class="product-detail" style="display:none">
-<table class="detail-table"><thead><tr><th>型号规格</th><th>库存</th><th>最长库龄</th></tr></thead>
-<tbody><tr><td class="model-cell" title="哑光黑">哑光黑</td><td class="count-cell"><strong>2</strong></td><td class="age-cell age-old">353天</td></tr></tbody></table>
-</div></div></div>
-</div><div class="category-section" data-cat="头戴式耳机">
-<div class="category-header" style="border-left:5px solid #5AC8FA">
-<span class="cat-icon">🎧</span><span class="cat-name">头戴式耳机</span><span class="cat-count" style="background:#5AC8FA">8台</span>
-</div>
-<div class="products-grid"><div class="product-card" onclick="toggleDetail(this)">
-<div class="product-header">
-<div class="product-title"><span class="product-name">AirPods Max 2 头戴式降噪耳机</span><span class="product-count" style="background:#5AC8FA">4台</span></div>
-<div class="product-meta"><span class="mini-badge normal-b">4新货</span></div>
-</div>
-<div class="product-detail" style="display:none">
-<table class="detail-table"><thead><tr><th>型号规格</th><th>库存</th><th>最长库龄</th></tr></thead>
-<tbody><tr><td class="model-cell" title="午夜色">午夜色</td><td class="count-cell"><strong>2</strong></td><td class="age-cell age-new">11天</td></tr><tr><td class="model-cell" title="星光色">星光色</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-new">11天</td></tr><tr><td class="model-cell" title="橙色">橙色</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-new">11天</td></tr></tbody></table>
-</div></div><div class="product-card" onclick="toggleDetail(this)">
-<div class="product-header">
-<div class="product-title"><span class="product-name">Beats Solo 4 头戴式无线蓝牙耳机</span><span class="product-count" style="background:#5AC8FA">4台</span></div>
-<div class="product-meta"><span class="mini-badge flaw-b">🔴4老品</span></div>
-</div>
-<div class="product-detail" style="display:none">
-<table class="detail-table"><thead><tr><th>型号规格</th><th>库存</th><th>最长库龄</th></tr></thead>
-<tbody><tr><td class="model-cell" title="云彩粉">云彩粉</td><td class="count-cell"><strong>2</strong></td><td class="age-cell age-old">241天</td></tr><tr><td class="model-cell" title="哑光黑">哑光黑</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-old">225天</td></tr><tr><td class="model-cell" title="岩青色">岩青色</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-old">241天</td></tr></tbody></table>
-</div></div></div>
-</div><div class="category-section" data-cat="苹果保护壳">
-<div class="category-header" style="border-left:5px solid #FF6B6B">
-<span class="cat-icon">🛡️</span><span class="cat-name">苹果保护壳</span><span class="cat-count" style="background:#FF6B6B">39台</span>
-</div>
-<div class="products-grid"><div class="product-card" onclick="toggleDetail(this)">
-<div class="product-header">
-<div class="product-title"><span class="product-name">Beats 款 iPhone 17 Pro Max 保护壳 (支持 MagSafe 和相机控制)</span><span class="product-count" style="background:#FF6B6B">5台</span></div>
-<div class="product-meta"><span class="mini-badge flaw-b">🔴5老品</span></div>
-</div>
-<div class="product-detail" style="display:none">
-<table class="detail-table"><thead><tr><th>型号规格</th><th>库存</th><th>最长库龄</th></tr></thead>
-<tbody><tr><td class="model-cell" title="浅岩灰">浅岩灰</td><td class="count-cell"><strong>2</strong></td><td class="age-cell age-old">176天</td></tr><tr><td class="model-cell" title="深岩灰">深岩灰</td><td class="count-cell"><strong>2</strong></td><td class="age-cell age-old">213天</td></tr><tr><td class="model-cell" title="磐岩蓝">磐岩蓝</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-old">64天</td></tr></tbody></table>
-</div></div><div class="product-card" onclick="toggleDetail(this)">
-<div class="product-header">
-<div class="product-title"><span class="product-name">Beats 款 iPhone 17 Pro 保护壳 (支持 MagSafe 和相机控制)</span><span class="product-count" style="background:#FF6B6B">4台</span></div>
-<div class="product-meta"><span class="mini-badge flaw-b">🔴4老品</span></div>
-</div>
-<div class="product-detail" style="display:none">
-<table class="detail-table"><thead><tr><th>型号规格</th><th>库存</th><th>最长库龄</th></tr></thead>
-<tbody><tr><td class="model-cell" title="浅岩灰">浅岩灰</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-old">213天</td></tr><tr><td class="model-cell" title="深岩灰">深岩灰</td><td class="count-cell"><strong>2</strong></td><td class="age-cell age-old">213天</td></tr><tr><td class="model-cell" title="磐岩蓝">磐岩蓝</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-old">176天</td></tr></tbody></table>
-</div></div><div class="product-card" onclick="toggleDetail(this)">
-<div class="product-header">
-<div class="product-title"><span class="product-name">Beats款 iPhone 17 Pro Max 支架保护壳 (支持 MagSafe 和相机控制)</span><span class="product-count" style="background:#FF6B6B">1台</span></div>
-<div class="product-meta"><span class="mini-badge flaw-b">🔴1老品</span></div>
-</div>
-<div class="product-detail" style="display:none">
-<table class="detail-table"><thead><tr><th>型号规格</th><th>库存</th><th>最长库龄</th></tr></thead>
-<tbody><tr><td class="model-cell" title="浅岩灰">浅岩灰</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-old">213天</td></tr></tbody></table>
-</div></div><div class="product-card" onclick="toggleDetail(this)">
-<div class="product-header">
-<div class="product-title"><span class="product-name">Beats款 iPhone 17 Pro 支架保护壳 (支持 MagSafe 和相机控制)</span><span class="product-count" style="background:#FF6B6B">1台</span></div>
-<div class="product-meta"><span class="mini-badge flaw-b">🔴1老品</span></div>
-</div>
-<div class="product-detail" style="display:none">
-<table class="detail-table"><thead><tr><th>型号规格</th><th>库存</th><th>最长库龄</th></tr></thead>
-<tbody><tr><td class="model-cell" title="浅岩灰">浅岩灰</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-old">213天</td></tr></tbody></table>
-</div></div><div class="product-card" onclick="toggleDetail(this)">
-<div class="product-header">
-<div class="product-title"><span class="product-name">Beats款 iPhone 17 保护壳 (支持 MagSafe 和相机控制)</span><span class="product-count" style="background:#FF6B6B">3台</span></div>
-<div class="product-meta"><span class="mini-badge flaw-b">🔴3老品</span></div>
-</div>
-<div class="product-detail" style="display:none">
-<table class="detail-table"><thead><tr><th>型号规格</th><th>库存</th><th>最长库龄</th></tr></thead>
-<tbody><tr><td class="model-cell" title="卵石粉">卵石粉</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-old">213天</td></tr><tr><td class="model-cell" title="深岩灰">深岩灰</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-old">213天</td></tr><tr><td class="model-cell" title="磐岩蓝">磐岩蓝</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-old">213天</td></tr></tbody></table>
-</div></div><div class="product-card" onclick="toggleDetail(this)">
-<div class="product-header">
-<div class="product-title"><span class="product-name">Beats款 iPhone Air 保护壳 (支持 MagSafe 和相机控制)</span><span class="product-count" style="background:#FF6B6B">4台</span></div>
-<div class="product-meta"><span class="mini-badge flaw-b">🔴4老品</span></div>
-</div>
-<div class="product-detail" style="display:none">
-<table class="detail-table"><thead><tr><th>型号规格</th><th>库存</th><th>最长库龄</th></tr></thead>
-<tbody><tr><td class="model-cell" title="卵石粉">卵石粉</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-old">183天</td></tr><tr><td class="model-cell" title="浅岩灰">浅岩灰</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-old">183天</td></tr><tr><td class="model-cell" title="深岩灰">深岩灰</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-old">184天</td></tr><tr><td class="model-cell" title="磐岩蓝">磐岩蓝</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-old">183天</td></tr></tbody></table>
-</div></div><div class="product-card" onclick="toggleDetail(this)">
-<div class="product-header">
-<div class="product-title"><span class="product-name">原装 iPhone 16 Plus 专用 MagSafe 硅胶保护壳</span><span class="product-count" style="background:#FF6B6B">4台</span></div>
-<div class="product-meta"><span class="mini-badge flaw-b">🔴4老品</span></div>
-</div>
-<div class="product-detail" style="display:none">
-<table class="detail-table"><thead><tr><th>型号规格</th><th>库存</th><th>最长库龄</th></tr></thead>
-<tbody><tr><td class="model-cell" title="丹宁色">丹宁色</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-old">579天</td></tr><tr><td class="model-cell" title="岩石灰">岩石灰</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-old">530天</td></tr><tr><td class="model-cell" title="梅子色">梅子色</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-old">579天</td></tr><tr><td class="model-cell" title="紫红色">紫红色</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-old">579天</td></tr></tbody></table>
-</div></div><div class="product-card" onclick="toggleDetail(this)">
-<div class="product-header">
-<div class="product-title"><span class="product-name">原装 iPhone 16 Plus 专用 MagSafe 透明保护壳</span><span class="product-count" style="background:#FF6B6B">1台</span></div>
-<div class="product-meta"><span class="mini-badge flaw-b">🔴1老品</span></div>
-</div>
-<div class="product-detail" style="display:none">
-<table class="detail-table"><thead><tr><th>型号规格</th><th>库存</th><th>最长库龄</th></tr></thead>
-<tbody><tr><td class="model-cell" title="透明">透明</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-old">579天</td></tr></tbody></table>
-</div></div><div class="product-card" onclick="toggleDetail(this)">
-<div class="product-header">
-<div class="product-title"><span class="product-name">原装 iPhone 16 专用 MagSafe 硅胶保护壳</span><span class="product-count" style="background:#FF6B6B">5台</span></div>
-<div class="product-meta"><span class="mini-badge flaw-b">🔴5老品</span></div>
-</div>
-<div class="product-detail" style="display:none">
-<table class="detail-table"><thead><tr><th>型号规格</th><th>库存</th><th>最长库龄</th></tr></thead>
-<tbody><tr><td class="model-cell" title="杨桃色">杨桃色</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-old">579天</td></tr><tr><td class="model-cell" title="梅子色">梅子色</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-old">579天</td></tr><tr><td class="model-cell" title="湖绿色">湖绿色</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-old">579天</td></tr><tr><td class="model-cell" title="群青色">群青色</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-old">579天</td></tr><tr><td class="model-cell" title="黑色">黑色</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-old">579天</td></tr></tbody></table>
-</div></div><div class="product-card" onclick="toggleDetail(this)">
-<div class="product-header">
-<div class="product-title"><span class="product-name">原装 iPhone 17 Pro Max 专用 MagSafe 硅胶保护壳</span><span class="product-count" style="background:#FF6B6B">4台</span></div>
-<div class="product-meta"><span class="mini-badge flaw-b">🔴4老品</span></div>
-</div>
-<div class="product-detail" style="display:none">
-<table class="detail-table"><thead><tr><th>型号规格</th><th>库存</th><th>最长库龄</th></tr></thead>
-<tbody><tr><td class="model-cell" title="雾紫色">雾紫色</td><td class="count-cell"><strong>2</strong></td><td class="age-cell age-old">122天</td></tr><tr><td class="model-cell" title="霓虹黄色">霓虹黄色</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-old">213天</td></tr><tr><td class="model-cell" title="黑色">黑色</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-old">208天</td></tr></tbody></table>
-</div></div><div class="product-card" onclick="toggleDetail(this)">
-<div class="product-header">
-<div class="product-title"><span class="product-name">原装 iPhone 17 Pro Max 专用 MagSafe 透明保护壳</span><span class="product-count" style="background:#FF6B6B">1台</span></div>
-<div class="product-meta"><span class="mini-badge flaw-b">🔴1老品</span></div>
-</div>
-<div class="product-detail" style="display:none">
-<table class="detail-table"><thead><tr><th>型号规格</th><th>库存</th><th>最长库龄</th></tr></thead>
-<tbody><tr><td class="model-cell" title="透明">透明</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-old">50天</td></tr></tbody></table>
-</div></div><div class="product-card" onclick="toggleDetail(this)">
-<div class="product-header">
-<div class="product-title"><span class="product-name">原装 iPhone 17 Pro 专用 MagSafe 硅胶保护壳</span><span class="product-count" style="background:#FF6B6B">4台</span></div>
-<div class="product-meta"><span class="mini-badge flaw-b">🔴4老品</span></div>
-</div>
-<div class="product-detail" style="display:none">
-<table class="detail-table"><thead><tr><th>型号规格</th><th>库存</th><th>最长库龄</th></tr></thead>
-<tbody><tr><td class="model-cell" title="雾紫色">雾紫色</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-old">176天</td></tr><tr><td class="model-cell" title="霓虹黄色">霓虹黄色</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-old">208天</td></tr><tr><td class="model-cell" title="黑色">黑色</td><td class="count-cell"><strong>2</strong></td><td class="age-cell age-old">31天</td></tr></tbody></table>
-</div></div><div class="product-card" onclick="toggleDetail(this)">
-<div class="product-header">
-<div class="product-title"><span class="product-name">原装 iPhone 17 Pro 专用 MagSafe 透明保护壳</span><span class="product-count" style="background:#FF6B6B">2台</span></div>
-<div class="product-meta"><span class="mini-badge flaw-b">🔴2老品</span></div>
-</div>
-<div class="product-detail" style="display:none">
-<table class="detail-table"><thead><tr><th>型号规格</th><th>库存</th><th>最长库龄</th></tr></thead>
-<tbody><tr><td class="model-cell" title="透明">透明</td><td class="count-cell"><strong>2</strong></td><td class="age-cell age-old">91天</td></tr></tbody></table>
-</div></div></div>
-</div><div class="category-section" data-cat="平板周边">
-<div class="category-header" style="border-left:5px solid #34C759">
-<span class="cat-icon">✏️</span><span class="cat-name">平板周边</span><span class="cat-count" style="background:#34C759">19台</span>
-</div>
-<div class="products-grid"><div class="product-card" onclick="toggleDetail(this)">
-<div class="product-header">
-<div class="product-title"><span class="product-name">Pencil Pro 触控笔适用于iPad Pro M5/M4 Air M4/M3/M2</span><span class="product-count" style="background:#34C759">17台</span></div>
-<div class="product-meta"><span class="mini-badge flaw-b">🔴17老品</span></div>
-</div>
-<div class="product-detail" style="display:none">
-<table class="detail-table"><thead><tr><th>型号规格</th><th>库存</th><th>最长库龄</th></tr></thead>
-<tbody><tr><td class="model-cell" title="白色">白色</td><td class="count-cell"><strong>17</strong></td><td class="age-cell age-old">135天</td></tr></tbody></table>
-</div></div><div class="product-card" onclick="toggleDetail(this)">
-<div class="product-header">
-<div class="product-title"><span class="product-name">Pencil USB-C版触控笔 适用于iPad Air M4/M3/M2 /11代 A16</span><span class="product-count" style="background:#34C759">2台</span></div>
-<div class="product-meta"><span class="mini-badge flaw-b">🔴2老品</span></div>
-</div>
-<div class="product-detail" style="display:none">
-<table class="detail-table"><thead><tr><th>型号规格</th><th>库存</th><th>最长库龄</th></tr></thead>
-<tbody><tr><td class="model-cell" title="白色">白色</td><td class="count-cell"><strong>2</strong></td><td class="age-cell age-old">45天</td></tr></tbody></table>
-</div></div></div>
-</div><div class="category-section" data-cat="平板键盘">
-<div class="category-header" style="border-left:5px solid #AF52DE">
-<span class="cat-icon">⌨️</span><span class="cat-name">平板键盘</span><span class="cat-count" style="background:#AF52DE">7台</span>
-</div>
-<div class="products-grid"><div class="product-card" onclick="toggleDetail(this)">
-<div class="product-header">
-<div class="product-title"><span class="product-name">原装 妙控键盘 适用于 11英寸 iPad Pro M4/M5</span><span class="product-count" style="background:#AF52DE">2台</span></div>
-<div class="product-meta"><span class="mini-badge flaw-b">🔴2老品</span></div>
-</div>
-<div class="product-detail" style="display:none">
-<table class="detail-table"><thead><tr><th>型号规格</th><th>库存</th><th>最长库龄</th></tr></thead>
-<tbody><tr><td class="model-cell" title="黑色">黑色</td><td class="count-cell"><strong>2</strong></td><td class="age-cell age-old">128天</td></tr></tbody></table>
-</div></div><div class="product-card" onclick="toggleDetail(this)">
-<div class="product-header">
-<div class="product-title"><span class="product-name">原装 妙控键盘 适用于 13英寸 iPad Pro M4/M5</span><span class="product-count" style="background:#AF52DE">2台</span></div>
-<div class="product-meta"><span class="mini-badge flaw-b">🔴2老品</span></div>
-</div>
-<div class="product-detail" style="display:none">
-<table class="detail-table"><thead><tr><th>型号规格</th><th>库存</th><th>最长库龄</th></tr></thead>
-<tbody><tr><td class="model-cell" title="黑色">黑色</td><td class="count-cell"><strong>2</strong></td><td class="age-cell age-old">468天</td></tr></tbody></table>
-</div></div><div class="product-card" onclick="toggleDetail(this)">
-<div class="product-header">
-<div class="product-title"><span class="product-name">原装 妙控键盘 适用于11英寸 iPad Air M4/M3/M2/第四代/第五代</span><span class="product-count" style="background:#AF52DE">3台</span></div>
-<div class="product-meta"><span class="mini-badge normal-b">2新货</span><span class="mini-badge slow-b">⚠1注意</span></div>
-</div>
-<div class="product-detail" style="display:none">
-<table class="detail-table"><thead><tr><th>型号规格</th><th>库存</th><th>最长库龄</th></tr></thead>
-<tbody><tr><td class="model-cell" title="白色">白色</td><td class="count-cell"><strong>2</strong></td><td class="age-cell age-warn">18天</td></tr><tr><td class="model-cell" title="黑色">黑色</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-new">8天</td></tr></tbody></table>
-</div></div></div>
-</div><div class="category-section" data-cat="充电器">
-<div class="category-header" style="border-left:5px solid #636366">
-<span class="cat-icon">🔌</span><span class="cat-name">充电器</span><span class="cat-count" style="background:#636366">49台</span>
-</div>
-<div class="products-grid"><div class="product-card" onclick="toggleDetail(this)">
-<div class="product-header">
-<div class="product-title"><span class="product-name">140W USB-C 电源适配器</span><span class="product-count" style="background:#636366">1台</span></div>
-<div class="product-meta"><span class="mini-badge flaw-b">🔴1老品</span></div>
-</div>
-<div class="product-detail" style="display:none">
-<table class="detail-table"><thead><tr><th>型号规格</th><th>库存</th><th>最长库龄</th></tr></thead>
-<tbody><tr><td class="model-cell" title="白色 MLYU3CH/A/MW2M3CH/A">白色 MLYU3CH/A/MW2M3CH/A</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-old">64天</td></tr></tbody></table>
-</div></div><div class="product-card" onclick="toggleDetail(this)">
-<div class="product-header">
-<div class="product-title"><span class="product-name">20W USB-C 电源适配器</span><span class="product-count" style="background:#636366">17台</span></div>
-<div class="product-meta"><span class="mini-badge normal-b">5新货</span><span class="mini-badge flaw-b">🔴12老品</span></div>
-</div>
-<div class="product-detail" style="display:none">
-<table class="detail-table"><thead><tr><th>型号规格</th><th>库存</th><th>最长库龄</th></tr></thead>
-<tbody><tr><td class="model-cell" title="白色 MWVW3CH/A">白色 MWVW3CH/A</td><td class="count-cell"><strong>17</strong></td><td class="age-cell age-old">585天</td></tr></tbody></table>
-</div></div><div class="product-card" onclick="toggleDetail(this)">
-<div class="product-header">
-<div class="product-title"><span class="product-name">35W 双USB-C 电源适配</span><span class="product-count" style="background:#636366">7台</span></div>
-<div class="product-meta"><span class="mini-badge flaw-b">🔴7老品</span></div>
-</div>
-<div class="product-detail" style="display:none">
-<table class="detail-table"><thead><tr><th>型号规格</th><th>库存</th><th>最长库龄</th></tr></thead>
-<tbody><tr><td class="model-cell" title="白色 MW4D3CH/A">白色 MW4D3CH/A</td><td class="count-cell"><strong>7</strong></td><td class="age-cell age-old">208天</td></tr></tbody></table>
-</div></div><div class="product-card" onclick="toggleDetail(this)">
-<div class="product-header">
-<div class="product-title"><span class="product-name">USB-C 电源适配器 96W</span><span class="product-count" style="background:#636366">1台</span></div>
-<div class="product-meta"><span class="mini-badge flaw-b">🔴1老品</span></div>
-</div>
-<div class="product-detail" style="display:none">
-<table class="detail-table"><thead><tr><th>型号规格</th><th>库存</th><th>最长库龄</th></tr></thead>
-<tbody><tr><td class="model-cell" title="白色 MX0J2CH/A/MW2L3CH/A">白色 MX0J2CH/A/MW2L3CH/A</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-old">86天</td></tr></tbody></table>
-</div></div><div class="product-card" onclick="toggleDetail(this)">
-<div class="product-header">
-<div class="product-title"><span class="product-name">【适配iPhone 17系列】苹果 原装40W USB-C 动态快充折叠充电器 最高60W</span><span class="product-count" style="background:#636366">19台</span></div>
-<div class="product-meta"><span class="mini-badge normal-b">8新货</span><span class="mini-badge flaw-b">🔴11老品</span></div>
-</div>
-<div class="product-detail" style="display:none">
-<table class="detail-table"><thead><tr><th>型号规格</th><th>库存</th><th>最长库龄</th></tr></thead>
-<tbody><tr><td class="model-cell" title="白色">白色</td><td class="count-cell"><strong>19</strong></td><td class="age-cell age-old">73天</td></tr></tbody></table>
-</div></div><div class="product-card" onclick="toggleDetail(this)">
-<div class="product-header">
-<div class="product-title"><span class="product-name">原装 140W USB-C 电源适配器</span><span class="product-count" style="background:#636366">1台</span></div>
-<div class="product-meta"><span class="mini-badge normal-b">1新货</span></div>
-</div>
-<div class="product-detail" style="display:none">
-<table class="detail-table"><thead><tr><th>型号规格</th><th>库存</th><th>最长库龄</th></tr></thead>
-<tbody><tr><td class="model-cell" title="白色">白色</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-new">2天</td></tr></tbody></table>
-</div></div><div class="product-card" onclick="toggleDetail(this)">
-<div class="product-header">
-<div class="product-title"><span class="product-name">原装 Apple Watch 磁力编织快速充电器转 USB-C 连接线(新款)</span><span class="product-count" style="background:#636366">3台</span></div>
-<div class="product-meta"><span class="mini-badge flaw-b">🔴3老品</span></div>
-</div>
-<div class="product-detail" style="display:none">
-<table class="detail-table"><thead><tr><th>型号规格</th><th>库存</th><th>最长库龄</th></tr></thead>
-<tbody><tr><td class="model-cell" title="1m">1m</td><td class="count-cell"><strong>3</strong></td><td class="age-cell age-old">205天</td></tr></tbody></table>
-</div></div></div>
-</div><div class="category-section" data-cat="数据线">
-<div class="category-header" style="border-left:5px solid #636366">
-<span class="cat-icon">🔗</span><span class="cat-name">数据线</span><span class="cat-count" style="background:#636366">56台</span>
-</div>
-<div class="products-grid"><div class="product-card" onclick="toggleDetail(this)">
-<div class="product-header">
-<div class="product-title"><span class="product-name">60W USB-C转USB-C 手机/平板/笔记本编织数据线</span><span class="product-count" style="background:#636366">23台</span></div>
-<div class="product-meta"><span class="mini-badge flaw-b">🔴23老品</span></div>
-</div>
-<div class="product-detail" style="display:none">
-<table class="detail-table"><thead><tr><th>型号规格</th><th>库存</th><th>最长库龄</th></tr></thead>
-<tbody><tr><td class="model-cell" title="白色">白色</td><td class="count-cell"><strong>23</strong></td><td class="age-cell age-old">570天</td></tr></tbody></table>
-</div></div><div class="product-card" onclick="toggleDetail(this)">
-<div class="product-header">
-<div class="product-title"><span class="product-name">Beats USB-C 转 USB-C 编织连接线 (1.5 米)</span><span class="product-count" style="background:#636366">1台</span></div>
-<div class="product-meta"><span class="mini-badge flaw-b">🔴1老品</span></div>
-</div>
-<div class="product-detail" style="display:none">
-<table class="detail-table"><thead><tr><th>型号规格</th><th>库存</th><th>最长库龄</th></tr></thead>
-<tbody><tr><td class="model-cell" title="灰色">灰色</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-old">283天</td></tr></tbody></table>
-</div></div><div class="product-card" onclick="toggleDetail(this)">
-<div class="product-header">
-<div class="product-title"><span class="product-name">Beats USB-C 转闪电编织连接线 (1.5 米) - 闪电黑</span><span class="product-count" style="background:#636366">1台</span></div>
-<div class="product-meta"><span class="mini-badge flaw-b">🔴1老品</span></div>
-</div>
-<div class="product-detail" style="display:none">
-<table class="detail-table"><thead><tr><th>型号规格</th><th>库存</th><th>最长库龄</th></tr></thead>
-<tbody><tr><td class="model-cell" title="USB-C转闪电连接线 黑色 1.5m">USB-C转闪电连接线 黑色 1.5m</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-old">283天</td></tr></tbody></table>
-</div></div><div class="product-card" onclick="toggleDetail(this)">
-<div class="product-header">
-<div class="product-title"><span class="product-name">USB-C 转闪电连接线</span><span class="product-count" style="background:#636366">15台</span></div>
-<div class="product-meta"><span class="mini-badge normal-b">12新货</span><span class="mini-badge slow-b">⚠1注意</span><span class="mini-badge flaw-b">🔴2老品</span></div>
-</div>
-<div class="product-detail" style="display:none">
-<table class="detail-table"><thead><tr><th>型号规格</th><th>库存</th><th>最长库龄</th></tr></thead>
-<tbody><tr><td class="model-cell" title="白色 MUQ93FE/A">白色 MUQ93FE/A</td><td class="count-cell"><strong>15</strong></td><td class="age-cell age-old">601天</td></tr></tbody></table>
-</div></div><div class="product-card" onclick="toggleDetail(this)">
-<div class="product-header">
-<div class="product-title"><span class="product-name">原装 100W USB-C转USB-C 雷电4 USB4 手机/平板/笔记本电脑 高速传输编织数据线（大件）</span><span class="product-count" style="background:#636366">3台</span></div>
-<div class="product-meta"><span class="mini-badge flaw-b">🔴3老品</span></div>
-</div>
-<div class="product-detail" style="display:none">
-<table class="detail-table"><thead><tr><th>型号规格</th><th>库存</th><th>最长库龄</th></tr></thead>
-<tbody><tr><td class="model-cell" title="黑色">黑色</td><td class="count-cell"><strong>3</strong></td><td class="age-cell age-old">585天</td></tr></tbody></table>
-</div></div><div class="product-card" onclick="toggleDetail(this)">
-<div class="product-header">
-<div class="product-title"><span class="product-name">原装 240W USB-C转USB-C 手机/平板/笔记本电脑编织数据线</span><span class="product-count" style="background:#636366">6台</span></div>
-<div class="product-meta"><span class="mini-badge normal-b">1新货</span><span class="mini-badge slow-b">⚠3注意</span><span class="mini-badge flaw-b">🔴2老品</span></div>
-</div>
-<div class="product-detail" style="display:none">
-<table class="detail-table"><thead><tr><th>型号规格</th><th>库存</th><th>最长库龄</th></tr></thead>
-<tbody><tr><td class="model-cell" title="白色 2m">白色 2m</td><td class="count-cell"><strong>6</strong></td><td class="age-cell age-old">171天</td></tr></tbody></table>
-</div></div><div class="product-card" onclick="toggleDetail(this)">
-<div class="product-header">
-<div class="product-title"><span class="product-name">原装 Lightning 数据线 1m</span><span class="product-count" style="background:#636366">3台</span></div>
-<div class="product-meta"><span class="mini-badge normal-b">1新货</span><span class="mini-badge flaw-b">🔴2老品</span></div>
-</div>
-<div class="product-detail" style="display:none">
-<table class="detail-table"><thead><tr><th>型号规格</th><th>库存</th><th>最长库龄</th></tr></thead>
-<tbody><tr><td class="model-cell" title="白色 1m">白色 1m</td><td class="count-cell"><strong>3</strong></td><td class="age-cell age-old">75天</td></tr></tbody></table>
-</div></div><div class="product-card" onclick="toggleDetail(this)">
-<div class="product-header">
-<div class="product-title"><span class="product-name">原装 Type-C转3.5毫米 转接器 0.08m</span><span class="product-count" style="background:#636366">4台</span></div>
-<div class="product-meta"><span class="mini-badge normal-b">1新货</span><span class="mini-badge flaw-b">🔴3老品</span></div>
-</div>
-<div class="product-detail" style="display:none">
-<table class="detail-table"><thead><tr><th>型号规格</th><th>库存</th><th>最长库龄</th></tr></thead>
-<tbody><tr><td class="model-cell" title="白色 8cm MW2Q3FE/A">白色 8cm MW2Q3FE/A</td><td class="count-cell"><strong>4</strong></td><td class="age-cell age-old">120天</td></tr></tbody></table>
-</div></div></div>
-</div><div class="category-section" data-cat="手机周边">
-<div class="category-header" style="border-left:5px solid #FF9500">
-<span class="cat-icon">🏷️</span><span class="cat-name">手机周边</span><span class="cat-count" style="background:#FF9500">5台</span>
-</div>
-<div class="products-grid"><div class="product-card" onclick="toggleDetail(this)">
-<div class="product-header">
-<div class="product-title"><span class="product-name">AirTag</span><span class="product-count" style="background:#FF9500">3台</span></div>
-<div class="product-meta"><span class="mini-badge flaw-b">🔴3老品</span></div>
-</div>
-<div class="product-detail" style="display:none">
-<table class="detail-table"><thead><tr><th>型号规格</th><th>库存</th><th>最长库龄</th></tr></thead>
-<tbody><tr><td class="model-cell" title="单件装">单件装</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-old">115天</td></tr><tr><td class="model-cell" title="四件装">四件装</td><td class="count-cell"><strong>2</strong></td><td class="age-cell age-old">100天</td></tr></tbody></table>
-</div></div><div class="product-card" onclick="toggleDetail(this)">
-<div class="product-header">
-<div class="product-title"><span class="product-name">AirTag 第二代</span><span class="product-count" style="background:#FF9500">2台</span></div>
-<div class="product-meta"><span class="mini-badge normal-b">1新货</span><span class="mini-badge slow-b">⚠1注意</span></div>
-</div>
-<div class="product-detail" style="display:none">
-<table class="detail-table"><thead><tr><th>型号规格</th><th>库存</th><th>最长库龄</th></tr></thead>
-<tbody><tr><td class="model-cell" title="四件装">四件装</td><td class="count-cell"><strong>2</strong></td><td class="age-cell age-warn">24天</td></tr></tbody></table>
-</div></div></div>
-</div><div class="category-section" data-cat="鼠标">
-<div class="category-header" style="border-left:5px solid #FF9500">
-<span class="cat-icon">🖱️</span><span class="cat-name">鼠标</span><span class="cat-count" style="background:#FF9500">5台</span>
-</div>
-<div class="products-grid"><div class="product-card" onclick="toggleDetail(this)">
-<div class="product-header">
-<div class="product-title"><span class="product-name">Magic Mouse妙控鼠标 多点触控表面</span><span class="product-count" style="background:#FF9500">5台</span></div>
-<div class="product-meta"><span class="mini-badge normal-b">1新货</span><span class="mini-badge slow-b">⚠3注意</span><span class="mini-badge flaw-b">🔴1老品</span></div>
-</div>
-<div class="product-detail" style="display:none">
-<table class="detail-table"><thead><tr><th>型号规格</th><th>库存</th><th>最长库龄</th></tr></thead>
-<tbody><tr><td class="model-cell" title="USB-C充电接口 白色">USB-C充电接口 白色</td><td class="count-cell"><strong>4</strong></td><td class="age-cell age-old">31天</td></tr><tr><td class="model-cell" title="USB-C充电接口 黑色">USB-C充电接口 黑色</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-new">8天</td></tr></tbody></table>
-</div></div></div>
-</div><div class="category-section" data-cat="手机耳机">
-<div class="category-header" style="border-left:5px solid #5AC8FA">
-<span class="cat-icon">🎵</span><span class="cat-name">手机耳机</span><span class="cat-count" style="background:#5AC8FA">13台</span>
-</div>
-<div class="products-grid"><div class="product-card" onclick="toggleDetail(this)">
-<div class="product-header">
-<div class="product-title"><span class="product-name">原装 EarPods Lightning 接口半入耳式线控耳机（大件）</span><span class="product-count" style="background:#5AC8FA">8台</span></div>
-<div class="product-meta"><span class="mini-badge slow-b">⚠2注意</span><span class="mini-badge flaw-b">🔴6老品</span></div>
-</div>
-<div class="product-detail" style="display:none">
-<table class="detail-table"><thead><tr><th>型号规格</th><th>库存</th><th>最长库龄</th></tr></thead>
-<tbody><tr><td class="model-cell" title="白色">白色</td><td class="count-cell"><strong>8</strong></td><td class="age-cell age-old">143天</td></tr></tbody></table>
-</div></div><div class="product-card" onclick="toggleDetail(this)">
-<div class="product-header">
-<div class="product-title"><span class="product-name">原装 MagSafe 磁吸无线充电器（新款大件）</span><span class="product-count" style="background:#5AC8FA">5台</span></div>
-<div class="product-meta"><span class="mini-badge flaw-b">🔴5老品</span></div>
-</div>
-<div class="product-detail" style="display:none">
-<table class="detail-table"><thead><tr><th>型号规格</th><th>库存</th><th>最长库龄</th></tr></thead>
-<tbody><tr><td class="model-cell" title="白色">白色</td><td class="count-cell"><strong>5</strong></td><td class="age-cell age-old">171天</td></tr></tbody></table>
-</div></div></div>
-</div><div class="category-section" data-cat="显示器">
+  <div class="category-section">
 <div class="category-header" style="border-left:5px solid #5E5CE6">
-<span class="cat-icon">🖥️</span><span class="cat-name">显示器</span><span class="cat-count" style="background:#5E5CE6">1台</span>
+<span class="cat-icon">🗣️</span><span class="cat-name">线上线下对比话术（门店销售参考）</span>
 </div>
-<div class="products-grid"><div class="product-card" onclick="toggleDetail(this)">
-<div class="product-header">
-<div class="product-title"><span class="product-name">Studio Display 显示器 27英寸</span><span class="product-count" style="background:#5E5CE6">1台</span></div>
-<div class="product-meta"><span class="mini-badge normal-b">1新货</span></div>
+<div class="products-grid" style="padding:12px 16px">
+<p style="font-size:12px;color:#8E8E93;margin-bottom:12px">点击卡片可展开，用于应对顾客"线上更便宜"的异议处理</p>
+<div class="script-card">
+<div class="script-title">💬 价格层面</div>
+<div class="script-body">「线上可能便宜几十块，但您想过售后问题怎么办吗？我们门店是官方授权，任何问题当场解决，不用来回邮寄、等待客服。这几十块的差价，买的是确定性和服务保障。」</div>
+</div><div class="script-card">
+<div class="script-title">💬 验机层面</div>
+<div class="script-body">「线上买到机器，您自己能确认是全新未激活吗？我们门店当场开箱验机，电池健康100%、激活状态当面核查，串号可以当场查官网，买得放心。」</div>
+</div><div class="script-card">
+<div class="script-title">💬 现货层面</div>
+<div class="script-body">「线上下单还要等物流，我们这里现货直接带走，今天买今天用，不用等。特别是热门颜色，线上经常缺货或者需要预约，我们今天这款就有现货。」</div>
+</div><div class="script-card">
+<div class="script-title">💬 以旧换新层面</div>
+<div class="script-body">「您手上有旧机吗？我们支持官方以旧换新，直接抵扣购机款，比自己挂二手平台方便得多，折价也更透明。把这个算进来，线下实际到手价差距没那么大了。」</div>
+</div><div class="script-card">
+<div class="script-title">💬 数据迁移层面</div>
+<div class="script-body">「我们门店可以帮您当场做数据迁移，微信记录、照片、联系人全部转过去，线上买完自己折腾，我们这里买完即用，省心。」</div>
+</div><div class="script-card">
+<div class="script-title">💬 老品/库存机专属话术</div>
+<div class="script-body">「这台机器我们可以给您申请一个特别优惠，比标价再让一点，加上以旧换新补贴，综合算下来比线上还划算，而且还有门店服务保障。」</div>
 </div>
-<div class="product-detail" style="display:none">
-<table class="detail-table"><thead><tr><th>型号规格</th><th>库存</th><th>最长库龄</th></tr></thead>
-<tbody><tr><td class="model-cell" title="银色 标准玻璃 可调倾斜度的支架 MFEX4CH/A">银色 标准玻璃 可调倾斜度的支架 MFEX4CH/A</td><td class="count-cell"><strong>1</strong></td><td class="age-cell age-new">10天</td></tr></tbody></table>
-</div></div></div>
-</div><div class="category-section" data-cat="音箱/音响">
-<div class="category-header" style="border-left:5px solid #5E5CE6">
-<span class="cat-icon">🔊</span><span class="cat-name">音箱/音响</span><span class="cat-count" style="background:#5E5CE6">2台</span>
-</div>
-<div class="products-grid"><div class="product-card" onclick="toggleDetail(this)">
-<div class="product-header">
-<div class="product-title"><span class="product-name">Beats Pill 无线蓝牙扬声器</span><span class="product-count" style="background:#5E5CE6">2台</span></div>
-<div class="product-meta"><span class="mini-badge flaw-b">🔴2老品</span></div>
-</div>
-<div class="product-detail" style="display:none">
-<table class="detail-table"><thead><tr><th>型号规格</th><th>库存</th><th>最长库龄</th></tr></thead>
-<tbody><tr><td class="model-cell" title="哑黑色">哑黑色</td><td class="count-cell"><strong>2</strong></td><td class="age-cell age-old">277天</td></tr></tbody></table>
-</div></div></div>
-</div>
+</div></div>
   <div class="no-result" id="noResult">未找到匹配的库存商品</div>
 </div>
 <script>
-function toggleDetail(card){
-  var d=card.querySelector('.product-detail');
-  if(d) d.style.display=d.style.display==='none'?'block':'none';
-}
+function toggleDetail(card){var d=card.querySelector('.product-detail');if(d)d.style.display=d.style.display==='none'?'block':'none';}
 function filterCat(cat,tabEl){
   document.querySelectorAll('.tab').forEach(function(t){t.classList.remove('active')});
   tabEl.classList.add('active');
@@ -772,14 +334,12 @@ function filterCat(cat,tabEl){
   document.querySelector('.search-input').value='';
 }
 function searchInventory(val){
-  val=val.trim().toLowerCase();
-  var hasResult=false;
+  val=val.trim().toLowerCase();var hasResult=false;
   document.querySelectorAll('.product-card').forEach(function(card){
     var match=!val||card.textContent.toLowerCase().includes(val);
-    card.style.display=match?'block':'none';
-    if(match) hasResult=true;
-    if(match&&val) card.querySelector('.product-detail').style.display='block';
-    else if(!val) card.querySelector('.product-detail').style.display='none';
+    card.style.display=match?'block':'none';if(match)hasResult=true;
+    if(match&&val)card.querySelector('.product-detail').style.display='block';
+    else if(!val)card.querySelector('.product-detail').style.display='none';
   });
   document.querySelectorAll('.category-section').forEach(function(sec){
     var vis=[...sec.querySelectorAll('.product-card')].some(function(c){return c.style.display!=='none'});
@@ -789,5 +349,4 @@ function searchInventory(val){
   if(val){document.querySelectorAll('.tab').forEach(function(t){t.classList.remove('active')});document.querySelector('.tab').classList.add('active');}
 }
 </script>
-</body>
-</html>
+</body></html>
