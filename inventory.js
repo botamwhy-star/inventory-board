@@ -1,810 +1,444 @@
 var DATA = {
-  "updated": "2026-04-20",
+  "updated": "2026-04-27",
   "summary": {
-    "total": 518,
-    "phone": 293,
-    "watch": 148,
-    "ipad": 66,
-    "mac": 11
+    "total": 503,
+    "phone": 279,
+    "watch": 141,
+    "ipad": 62,
+    "mac": 21
   },
   "phone": [
     {
       "series": "iPhone 16",
-      "variant": "白色 128GB",
+      "variant": "128GB",
       "qty": 1,
       "status": "red",
-      "tag": ""
+      "tag": "控货"
     },
     {
       "series": "iPhone 17",
-      "variant": "白色 256GB",
-      "qty": 31,
+      "variant": "256GB",
+      "qty": 177,
       "status": "green",
-      "tag": "★ 主推"
+      "tag": "注意库龄"
     },
     {
       "series": "iPhone 17",
-      "variant": "白色 512GB",
+      "variant": "512GB",
+      "qty": 58,
+      "status": "green",
+      "tag": "注意库龄"
+    },
+    {
+      "series": "iPhone 17",
+      "variant": "1TB",
       "qty": 1,
       "status": "red",
-      "tag": ""
-    },
-    {
-      "series": "iPhone 17",
-      "variant": "薰衣草紫色 256GB",
-      "qty": 22,
-      "status": "green",
-      "tag": "★ 主推"
-    },
-    {
-      "series": "iPhone 17",
-      "variant": "薰衣草紫色 512GB",
-      "qty": 2,
-      "status": "red",
-      "tag": ""
-    },
-    {
-      "series": "iPhone 17",
-      "variant": "青雾蓝色 256GB",
-      "qty": 9,
-      "status": "orange",
-      "tag": ""
-    },
-    {
-      "series": "iPhone 17",
-      "variant": "黑色 256GB",
-      "qty": 24,
-      "status": "green",
-      "tag": "★ 主推"
-    },
-    {
-      "series": "iPhone 17",
-      "variant": "黑色 512GB",
-      "qty": 1,
-      "status": "red",
-      "tag": ""
-    },
-    {
-      "series": "iPhone 17",
-      "variant": "鼠尾草绿色 256GB",
-      "qty": 7,
-      "status": "orange",
-      "tag": ""
-    },
-    {
-      "series": "iPhone 17 Pro",
-      "variant": "星宇橙色 256GB",
-      "qty": 16,
-      "status": "green",
-      "tag": "★ 主推"
-    },
-    {
-      "series": "iPhone 17 Pro",
-      "variant": "星宇橙色 512GB",
-      "qty": 4,
-      "status": "orange",
-      "tag": ""
-    },
-    {
-      "series": "iPhone 17 Pro",
-      "variant": "深蓝色 256GB",
-      "qty": 6,
-      "status": "orange",
-      "tag": ""
-    },
-    {
-      "series": "iPhone 17 Pro",
-      "variant": "深蓝色 512GB",
-      "qty": 2,
-      "status": "red",
-      "tag": ""
-    },
-    {
-      "series": "iPhone 17 Pro",
-      "variant": "银色 256GB",
-      "qty": 16,
-      "status": "green",
-      "tag": "★ 主推"
-    },
-    {
-      "series": "iPhone 17 Pro",
-      "variant": "银色 512GB",
-      "qty": 15,
-      "status": "green",
-      "tag": "★ 主推"
-    },
-    {
-      "series": "iPhone 17 Pro Max",
-      "variant": "星宇橙色 256GB",
-      "qty": 18,
-      "status": "green",
-      "tag": "★ 主推"
-    },
-    {
-      "series": "iPhone 17 Pro Max",
-      "variant": "星宇橙色 512GB",
-      "qty": 15,
-      "status": "green",
-      "tag": "★ 主推"
-    },
-    {
-      "series": "iPhone 17 Pro Max",
-      "variant": "深蓝色 256GB",
-      "qty": 9,
-      "status": "orange",
-      "tag": ""
-    },
-    {
-      "series": "iPhone 17 Pro Max",
-      "variant": "深蓝色 512GB",
-      "qty": 1,
-      "status": "red",
-      "tag": ""
-    },
-    {
-      "series": "iPhone 17 Pro Max",
-      "variant": "银色 1TB",
-      "qty": 1,
-      "status": "red",
-      "tag": ""
-    },
-    {
-      "series": "iPhone 17 Pro Max",
-      "variant": "银色 256GB",
-      "qty": 31,
-      "status": "green",
-      "tag": "★ 主推"
-    },
-    {
-      "series": "iPhone 17 Pro Max",
-      "variant": "银色 512GB",
-      "qty": 23,
-      "status": "green",
-      "tag": "★ 主推"
+      "tag": "控货"
     },
     {
       "series": "iPhone 17e",
-      "variant": "白色 256GB",
-      "qty": 5,
-      "status": "orange",
-      "tag": ""
-    },
-    {
-      "series": "iPhone 17e",
-      "variant": "黑色 256GB",
-      "qty": 5,
-      "status": "orange",
-      "tag": ""
-    },
-    {
-      "series": "iPhone Air",
-      "variant": "云白色 256GB",
-      "qty": 5,
-      "status": "orange",
-      "tag": ""
-    },
-    {
-      "series": "iPhone Air",
-      "variant": "天蓝色 256GB",
-      "qty": 7,
-      "status": "orange",
-      "tag": ""
-    },
-    {
-      "series": "iPhone Air",
-      "variant": "浅金色 256GB",
-      "qty": 10,
+      "variant": "256GB",
+      "qty": 16,
       "status": "green",
       "tag": ""
     },
     {
       "series": "iPhone Air",
-      "variant": "深空黑色 256GB",
-      "qty": 6,
-      "status": "orange",
+      "variant": "256GB",
+      "qty": 26,
+      "status": "green",
       "tag": ""
     }
   ],
   "watch": [
     {
-      "series": "Watch SE",
-      "variant": "午夜色表壳 40mm GPS",
-      "qty": 1,
+      "series": "Apple Watch SE 2024款",
+      "variant": "午夜色表壳+午夜色运动型表带M/L 44毫米 [MXF83C",
+      "qty": 2,
       "status": "red",
-      "tag": ""
+      "tag": "控货"
     },
     {
-      "series": "Watch SE",
-      "variant": "午夜色表壳 44mm GPS",
-      "qty": 6,
-      "status": "orange",
-      "tag": ""
-    },
-    {
-      "series": "Watch SE",
-      "variant": "午夜色表壳 44mm GPS+蜂窝",
-      "qty": 1,
-      "status": "red",
-      "tag": ""
-    },
-    {
-      "series": "Watch SE",
-      "variant": "星光色表壳 40mm GPS",
-      "qty": 4,
-      "status": "orange",
-      "tag": ""
-    },
-    {
-      "series": "Watch SE",
-      "variant": "星光色表壳 40mm GPS+蜂窝",
+      "series": "Apple Watch SE 3",
+      "variant": "星光色表壳+星光色运动型表带S/M 40毫米 [MEH44C",
       "qty": 5,
       "status": "orange",
       "tag": ""
     },
     {
-      "series": "Watch SE",
-      "variant": "星光色表壳 44mm GPS",
+      "series": "Apple Watch SE 3",
+      "variant": "星光色表壳+星光色运动型表带S/M 40毫米 [MEPM4C",
+      "qty": 5,
+      "status": "orange",
+      "tag": ""
+    },
+    {
+      "series": "Apple Watch SE 3",
+      "variant": "午夜色表壳+午夜色运动型表带M/L 44毫米 [MEHR4C",
+      "qty": 4,
+      "status": "orange",
+      "tag": ""
+    },
+    {
+      "series": "Apple Watch SE 3",
+      "variant": "星光色表壳+星光色运动型表带M/L 44毫米 [MEHK4C",
       "qty": 2,
       "status": "red",
+      "tag": "控货"
+    },
+    {
+      "series": "Apple Watch SE 3",
+      "variant": "午夜色表壳+午夜色运动型表带S/M 40毫米 [MEHA4C",
+      "qty": 1,
+      "status": "red",
+      "tag": "控货"
+    },
+    {
+      "series": "Apple Watch SE 3",
+      "variant": "午夜色表壳+午夜色运动型表带M/L 44毫米 [MEPY4C",
+      "qty": 1,
+      "status": "red",
+      "tag": "控货"
+    },
+    {
+      "series": "Apple Watch Series 11",
+      "variant": "银色铝金属表壳+雾紫色运动型表带S/M 42毫米 [MEUT",
+      "qty": 21,
+      "status": "green",
       "tag": ""
     },
     {
-      "series": "Watch Series 11",
-      "variant": "亮黑色表壳 42mm GPS",
+      "series": "Apple Watch Series 11",
+      "variant": "亮黑色表壳+黑色运动型表带M/L 46毫米 [MEVH4CH",
       "qty": 15,
       "status": "green",
-      "tag": "★ 主推"
+      "tag": "注意库龄"
     },
     {
-      "series": "Watch Series 11",
-      "variant": "亮黑色表壳 46mm GPS",
+      "series": "Apple Watch Series 11",
+      "variant": "深空灰色铝金属表壳+黑色运动型表带M/L 46毫米 [MEV",
       "qty": 14,
       "status": "green",
       "tag": ""
     },
     {
-      "series": "Watch Series 11",
-      "variant": "亮黑色表壳 46mm GPS+蜂窝",
-      "qty": 4,
-      "status": "orange",
-      "tag": ""
-    },
-    {
-      "series": "Watch Series 11",
-      "variant": "深空灰色铝金属表壳 42mm GPS",
-      "qty": 14,
-      "status": "green",
-      "tag": ""
-    },
-    {
-      "series": "Watch Series 11",
-      "variant": "深空灰色铝金属表壳 46mm GPS",
-      "qty": 17,
-      "status": "green",
-      "tag": "★ 主推"
-    },
-    {
-      "series": "Watch Series 11",
-      "variant": "玫瑰金色表壳 42mm GPS",
-      "qty": 16,
-      "status": "green",
-      "tag": "★ 主推"
-    },
-    {
-      "series": "Watch Series 11",
-      "variant": "玫瑰金色表壳 46mm GPS",
+      "series": "Apple Watch Series 11",
+      "variant": "亮黑色表壳+黑色运动型表带S/M 42毫米 [MEU94CH",
       "qty": 13,
       "status": "green",
-      "tag": ""
+      "tag": "注意库龄"
     },
     {
-      "series": "Watch Series 11",
-      "variant": "玫瑰金色表壳 46mm GPS+蜂窝",
-      "qty": 3,
-      "status": "red",
-      "tag": ""
-    },
-    {
-      "series": "Watch Series 11",
-      "variant": "玫瑰金色铝金屈表壳 42mm GPS+蜂窝",
-      "qty": 4,
-      "status": "orange",
-      "tag": ""
-    },
-    {
-      "series": "Watch Series 11",
-      "variant": "银色表壳 42mm GPS+蜂窝",
-      "qty": 1,
-      "status": "red",
-      "tag": ""
-    },
-    {
-      "series": "Watch Series 11",
-      "variant": "银色铝金属表壳 42mm GPS",
-      "qty": 23,
+      "series": "Apple Watch Series 11",
+      "variant": "深空灰色铝金属表壳+黑色运动型表带S/M 42毫米 [MEU",
+      "qty": 12,
       "status": "green",
-      "tag": "★ 主推"
+      "tag": "注意库龄"
     },
     {
-      "series": "Watch Series 11",
-      "variant": "银色铝金属表壳 46mm GPS",
+      "series": "Apple Watch Series 11",
+      "variant": "玫瑰金色表壳+淡桃粉色运动型表带S/M 42毫米 [MEUN",
+      "qty": 11,
+      "status": "green",
+      "tag": "注意库龄"
+    },
+    {
+      "series": "Apple Watch Series 11",
+      "variant": "玫瑰金色表壳+淡桃粉色运动型表带S/M 46毫米 [MEVT",
+      "qty": 7,
+      "status": "green",
+      "tag": ""
+    },
+    {
+      "series": "Apple Watch Series 11",
+      "variant": "玫瑰金色铝金屈表壳+淡桃粉色运动型表带S/M 42毫米 [M",
       "qty": 4,
       "status": "orange",
       "tag": ""
     },
     {
-      "series": "Watch Ultra",
-      "variant": "原色 49mm GPS",
+      "series": "Apple Watch Series 11",
+      "variant": "亮黑色表壳+黑色运动型表带S/M 46毫米 [MEVG4CH",
+      "qty": 4,
+      "status": "orange",
+      "tag": "注意库龄"
+    },
+    {
+      "series": "Apple Watch Series 11",
+      "variant": "亮黑色表壳+黑色运动型表带M/L 46毫米 [MFDA4CH",
+      "qty": 3,
+      "status": "orange",
+      "tag": ""
+    },
+    {
+      "series": "Apple Watch Series 11",
+      "variant": "银色铝金属表壳+雾紫色运动型表带M/L 46毫米 [MEVX",
+      "qty": 3,
+      "status": "orange",
+      "tag": "注意库龄"
+    },
+    {
+      "series": "Apple Watch Series 11",
+      "variant": "玫瑰金色表壳+淡桃粉色运动型表带M/L 46毫米 [MEVU",
+      "qty": 3,
+      "status": "orange",
+      "tag": "注意库龄"
+    },
+    {
+      "series": "Apple Watch Series 11",
+      "variant": "玫瑰金色表壳+淡桃粉色运动型表带M/L 42毫米 [MEUP",
+      "qty": 2,
+      "status": "red",
+      "tag": "控货"
+    },
+    {
+      "series": "Apple Watch Series 11",
+      "variant": "玫瑰金色表壳+淡桃粉色运动表带S/M 46毫米 [MFDG4",
+      "qty": 2,
+      "status": "red",
+      "tag": "控货"
+    },
+    {
+      "series": "Apple Watch Series 11",
+      "variant": "银色铝金属表壳+雾紫色运动型表带S/M 46毫米 [MEVW",
       "qty": 1,
       "status": "red",
-      "tag": ""
+      "tag": "控货"
+    },
+    {
+      "series": "Apple Watch Series 11",
+      "variant": "深空灰色铝金属表壳+黑色运动型表带S/M 46毫米 [MEV",
+      "qty": 1,
+      "status": "red",
+      "tag": "控货"
+    },
+    {
+      "series": "Apple Watch Series 11",
+      "variant": "深空灰色铝金属表壳+黑色运动型表带M/L 42毫米 [MEU",
+      "qty": 1,
+      "status": "red",
+      "tag": "控货"
+    },
+    {
+      "series": "Apple Watch Series 11",
+      "variant": "亮黑色表壳+黑色运动型表带M/L 42毫米 [MEUA4CH",
+      "qty": 1,
+      "status": "red",
+      "tag": "控货"
+    },
+    {
+      "series": "Apple Watch Series 11",
+      "variant": "银色铝金属表壳+雾紫色运动型表带M/L 42毫米 [MEUU",
+      "qty": 1,
+      "status": "red",
+      "tag": "控货"
+    },
+    {
+      "series": "Apple Watch Ultra 3",
+      "variant": "黑色 黑色海洋表带 49毫米 [MF0M4CH/B]",
+      "qty": 1,
+      "status": "red",
+      "tag": "控货"
+    },
+    {
+      "series": "Apple Watch Ultra 3",
+      "variant": "黑色 黑色高山回环式表带 S 49毫米 [MF0U4CH/B",
+      "qty": 1,
+      "status": "red",
+      "tag": "控货"
     }
   ],
   "ipad": [
     {
-      "series": "iPad Air 11寸",
-      "variant": "星光色 128GB",
-      "qty": 1,
-      "status": "red",
+      "series": "iPad  Air 2026款/第8代",
+      "variant": "256GB",
+      "qty": 14,
+      "status": "green",
       "tag": ""
     },
     {
-      "series": "iPad Air 11寸",
-      "variant": "星光色 256GB",
-      "qty": 1,
-      "status": "red",
+      "series": "iPad  Air 2026款/第8代",
+      "variant": "128GB",
+      "qty": 7,
+      "status": "green",
       "tag": ""
     },
     {
-      "series": "iPad Air 11寸",
-      "variant": "深空灰色 128GB",
-      "qty": 5,
-      "status": "orange",
+      "series": "iPad 2025款/第11代 11英寸",
+      "variant": "256GB",
+      "qty": 14,
+      "status": "green",
       "tag": ""
     },
     {
-      "series": "iPad Air 11寸",
-      "variant": "深空灰色 256GB",
+      "series": "iPad 2025款/第11代 11英寸",
+      "variant": "128GB",
       "qty": 12,
       "status": "green",
       "tag": ""
     },
     {
-      "series": "iPad Air 11寸",
-      "variant": "紫色 128GB",
+      "series": "iPad Air 2026款/第8代",
+      "variant": "256GB",
       "qty": 1,
       "status": "red",
-      "tag": ""
+      "tag": "控货"
     },
     {
-      "series": "iPad Air 11寸",
-      "variant": "蓝色 256GB",
-      "qty": 1,
-      "status": "red",
-      "tag": ""
+      "series": "iPad Pro 2025款/第8代",
+      "variant": "256GB",
+      "qty": 10,
+      "status": "green",
+      "tag": "注意库龄"
     },
     {
-      "series": "iPad Air 13寸",
-      "variant": "深空灰色 256GB",
-      "qty": 1,
-      "status": "red",
-      "tag": ""
-    },
-    {
-      "series": "iPad Pro 11寸",
-      "variant": "深空黑色 256GB",
-      "qty": 2,
-      "status": "red",
-      "tag": ""
-    },
-    {
-      "series": "iPad Pro 11寸",
-      "variant": "银色 256GB",
-      "qty": 5,
-      "status": "orange",
-      "tag": ""
-    },
-    {
-      "series": "iPad Pro 13寸",
-      "variant": "深空黑色 256GB",
-      "qty": 2,
-      "status": "red",
-      "tag": ""
-    },
-    {
-      "series": "iPad mini",
-      "variant": "深空灰色 128GB",
-      "qty": 1,
-      "status": "red",
-      "tag": ""
-    },
-    {
-      "series": "iPad mini",
-      "variant": "紫色 128GB",
-      "qty": 1,
-      "status": "red",
-      "tag": ""
-    },
-    {
-      "series": "iPad 标准版",
-      "variant": "粉色 128GB",
-      "qty": 6,
-      "status": "orange",
-      "tag": ""
-    },
-    {
-      "series": "iPad 标准版",
-      "variant": "粉色 256GB",
+      "series": "iPad mini 2024款/第7代",
+      "variant": "128GB",
       "qty": 4,
       "status": "orange",
-      "tag": ""
-    },
-    {
-      "series": "iPad 标准版",
-      "variant": "蓝色 128GB",
-      "qty": 3,
-      "status": "red",
-      "tag": ""
-    },
-    {
-      "series": "iPad 标准版",
-      "variant": "蓝色 256GB",
-      "qty": 3,
-      "status": "red",
-      "tag": ""
-    },
-    {
-      "series": "iPad 标准版",
-      "variant": "银色 128GB",
-      "qty": 8,
-      "status": "orange",
-      "tag": ""
-    },
-    {
-      "series": "iPad 标准版",
-      "variant": "银色 256GB",
-      "qty": 9,
-      "status": "orange",
-      "tag": ""
+      "tag": "★ 主推"
     }
   ],
   "mac": [
     {
-      "series": "Mac mini",
-      "variant": "银色 16G+256GB",
-      "qty": 2,
-      "status": "red",
+      "series": "MacBook Air M5版",
+      "variant": "16GB",
+      "qty": 19,
+      "status": "green",
       "tag": ""
     },
     {
-      "series": "MacBook Air 13.6英寸",
-      "variant": "午夜色 16GB+512GB",
+      "series": "MacBook Air M5版",
+      "variant": "24GB",
       "qty": 1,
       "status": "red",
-      "tag": ""
+      "tag": "控货"
     },
     {
-      "series": "MacBook Air 13.6英寸",
-      "variant": "天蓝色 16GB+1TB",
+      "series": "MacBook Neo 13英寸",
+      "variant": "8GB",
       "qty": 1,
       "status": "red",
-      "tag": ""
-    },
-    {
-      "series": "MacBook Air 13.6英寸",
-      "variant": "星光色 16GB+1TB",
-      "qty": 2,
-      "status": "red",
-      "tag": ""
-    },
-    {
-      "series": "MacBook Air 13.6英寸",
-      "variant": "星光色 16GB+512GB",
-      "qty": 1,
-      "status": "red",
-      "tag": ""
-    },
-    {
-      "series": "MacBook Air 13.6英寸",
-      "variant": "银色 16GB+1TB",
-      "qty": 1,
-      "status": "red",
-      "tag": ""
-    },
-    {
-      "series": "MacBook Air 15.3英寸",
-      "variant": "天蓝色 16GB+1TB",
-      "qty": 1,
-      "status": "red",
-      "tag": ""
-    },
-    {
-      "series": "MacBook Air 15.3英寸",
-      "variant": "星光色 16GB+512GB",
-      "qty": 1,
-      "status": "red",
-      "tag": ""
-    },
-    {
-      "series": "MacBook Pro 14英寸",
-      "variant": "银色 24G+1TB",
-      "qty": 1,
-      "status": "red",
-      "tag": ""
+      "tag": "控货"
     }
   ],
   "push": [
     {
-      "model": "iPhone 17",
-      "variant": "白色 256GB",
-      "qty": 31,
-      "col": "#F0F0F0"
+      "model": "iPad mini 2024款/第7代",
+      "variant": "128GB",
+      "qty": 4,
+      "col": "#0051D4"
     },
     {
-      "model": "iPhone 17 Pro Max",
-      "variant": "银色 256GB",
-      "qty": 31,
-      "col": "#C0C0C0"
+      "model": "Apple Watch Series 11",
+      "variant": "玫瑰金色铝金屈表壳+淡桃粉色运动型表带S/M 42毫米 [M",
+      "qty": 4,
+      "col": "#1E8E3E"
     },
     {
-      "model": "iPhone 17",
-      "variant": "黑色 256GB",
-      "qty": 24,
-      "col": "#333333"
+      "model": "Apple Watch Series 11",
+      "variant": "深空灰色铝金属表壳+黑色运动型表带M/L 46毫米 [MEV",
+      "qty": 14,
+      "col": "#8E44AD"
     },
     {
-      "model": "iPhone 17 Pro Max",
-      "variant": "银色 512GB",
-      "qty": 23,
-      "col": "#C0C0C0"
+      "model": "Apple Watch Series 11",
+      "variant": "玫瑰金色表壳+淡桃粉色运动型表带S/M 46毫米 [MEVT",
+      "qty": 7,
+      "col": "#E37400"
     },
     {
-      "model": "Watch Series 11",
-      "variant": "银色铝金属表壳 42mm GPS",
-      "qty": 23,
-      "col": "#C0C0C0"
-    },
-    {
-      "model": "iPhone 17",
-      "variant": "薰衣草紫色 256GB",
-      "qty": 22,
-      "col": "#A870C8"
-    },
-    {
-      "model": "iPhone 17 Pro Max",
-      "variant": "星宇橙色 256GB",
-      "qty": 18,
-      "col": "#E07830"
-    },
-    {
-      "model": "Watch Series 11",
-      "variant": "深空灰色铝金属表壳 46mm GPS",
-      "qty": 17,
-      "col": "#6B6B6B"
-    },
-    {
-      "model": "iPhone 17 Pro",
-      "variant": "星宇橙色 256GB",
+      "model": "iPhone 17e",
+      "variant": "256GB",
       "qty": 16,
-      "col": "#E07830"
+      "col": "#D93025"
     },
     {
-      "model": "iPhone 17 Pro",
-      "variant": "银色 256GB",
-      "qty": 16,
-      "col": "#C0C0C0"
+      "model": "Apple Watch SE 3",
+      "variant": "星光色表壳+星光色运动型表带S/M 40毫米 [MEH44C",
+      "qty": 5,
+      "col": "#00897B"
     },
     {
-      "model": "Watch Series 11",
-      "variant": "玫瑰金色表壳 42mm GPS",
-      "qty": 16,
-      "col": "#C8966E"
+      "model": "Apple Watch Series 11",
+      "variant": "银色铝金属表壳+雾紫色运动型表带S/M 42毫米 [MEUT",
+      "qty": 21,
+      "col": "#3949AB"
     },
     {
-      "model": "iPhone 17 Pro",
-      "variant": "银色 512GB",
-      "qty": 15,
-      "col": "#C0C0C0"
+      "model": "MacBook Air M5版",
+      "variant": "16GB",
+      "qty": 19,
+      "col": "#F4511E"
     }
   ],
   "warn": [
     {
-      "model": "iPhone 16 白色 128GB",
-      "status": "仅1台",
+      "model": "iPhone 16",
+      "status": "仅剩1台",
       "sev": "red",
-      "action": "推 iPhone 17 或 iPhone 17e"
+      "action": "积极转推替代型号，避免断货"
     },
     {
-      "model": "iPhone 17 白色 512GB",
-      "status": "仅1台",
+      "model": "iPhone 17",
+      "status": "仅剩1台",
       "sev": "red",
-      "action": "推同系列高配机型"
+      "action": "积极转推替代型号，避免断货"
     },
     {
-      "model": "iPhone 17 薰衣草紫色 512GB",
-      "status": "仅2台",
+      "model": "Apple Watch SE 3",
+      "status": "仅剩1台",
       "sev": "red",
-      "action": "推同系列高配机型"
+      "action": "积极转推替代型号，避免断货"
     },
     {
-      "model": "iPhone 17 黑色 512GB",
-      "status": "仅1台",
+      "model": "Apple Watch SE 3",
+      "status": "仅剩1台",
       "sev": "red",
-      "action": "推同系列高配机型"
+      "action": "积极转推替代型号，避免断货"
     },
     {
-      "model": "iPhone 17 Pro 深蓝色 512GB",
-      "status": "仅2台",
+      "model": "Apple Watch Series 11",
+      "status": "仅剩1台",
       "sev": "red",
-      "action": "推同系列高配机型"
+      "action": "积极转推替代型号，避免断货"
     },
     {
-      "model": "iPhone 17 Pro Max 深蓝色 512GB",
-      "status": "仅1台",
+      "model": "Apple Watch Series 11",
+      "status": "仅剩1台",
       "sev": "red",
-      "action": "推同系列高配机型"
+      "action": "积极转推替代型号，避免断货"
     },
     {
-      "model": "iPhone 17 Pro Max 银色 1TB",
-      "status": "仅1台",
-      "sev": "red",
-      "action": "推同系列高配机型"
-    },
-    {
-      "model": "Watch SE 午夜色表壳 40mm GPS",
-      "status": "仅1台",
-      "sev": "red",
-      "action": "推 Watch Series 11 银色"
-    },
-    {
-      "model": "Watch SE 午夜色表壳 44mm GPS+蜂窝",
-      "status": "仅1台",
-      "sev": "red",
-      "action": "推 Watch Series 11 银色"
-    },
-    {
-      "model": "Watch SE 星光色表壳 44mm GPS",
-      "status": "仅2台",
-      "sev": "red",
-      "action": "推 Watch Series 11 银色"
-    },
-    {
-      "model": "Watch Series 11 玫瑰金色表壳 46mm GPS+蜂窝",
-      "status": "仅3台",
+      "model": "Apple Watch SE 2024款 午夜色表壳+午夜色运动型表带M/L 44毫米 [MXF83C",
+      "status": "最长267天",
       "sev": "orange",
-      "action": "推同系列高配机型"
+      "action": "申请老品专项优惠，搭配以旧换新话术优先出清"
     },
     {
-      "model": "Watch Series 11 银色表壳 42mm GPS+蜂窝",
-      "status": "仅1台",
-      "sev": "red",
-      "action": "推同系列高配机型"
-    },
-    {
-      "model": "Watch Ultra 原色 49mm GPS",
-      "status": "仅1台",
-      "sev": "red",
-      "action": "推 Watch Series 11 高配"
-    },
-    {
-      "model": "iPad Air 11寸 星光色 128GB",
-      "status": "仅1台",
-      "sev": "red",
-      "action": "推 iPad 标准版或 Pro"
-    },
-    {
-      "model": "iPad Air 11寸 星光色 256GB",
-      "status": "仅1台",
-      "sev": "red",
-      "action": "推 iPad 标准版或 Pro"
-    },
-    {
-      "model": "iPad Air 11寸 紫色 128GB",
-      "status": "仅1台",
-      "sev": "red",
-      "action": "推 iPad 标准版或 Pro"
-    },
-    {
-      "model": "iPad Air 11寸 蓝色 256GB",
-      "status": "仅1台",
-      "sev": "red",
-      "action": "推 iPad 标准版或 Pro"
-    },
-    {
-      "model": "iPad Air 13寸 深空灰色 256GB",
-      "status": "仅1台",
-      "sev": "red",
-      "action": "推 iPad 标准版或 Pro"
-    },
-    {
-      "model": "iPad Pro 11寸 深空黑色 256GB",
-      "status": "仅2台",
-      "sev": "red",
-      "action": "推 iPad Air 或标准版"
-    },
-    {
-      "model": "iPad Pro 13寸 深空黑色 256GB",
-      "status": "仅2台",
-      "sev": "red",
-      "action": "推 iPad Air 或标准版"
-    },
-    {
-      "model": "iPad mini 深空灰色 128GB",
-      "status": "仅1台",
-      "sev": "red",
-      "action": "推 iPad Air 或 iPad 标准版 256GB"
-    },
-    {
-      "model": "iPad mini 紫色 128GB",
-      "status": "仅1台",
-      "sev": "red",
-      "action": "推 iPad Air 或 iPad 标准版 256GB"
-    },
-    {
-      "model": "iPad 标准版 蓝色 128GB",
-      "status": "仅3台",
+      "model": "iPhone 16 128GB",
+      "status": "最长245天",
       "sev": "orange",
-      "action": "推同系列高配机型"
+      "action": "申请老品专项优惠，搭配以旧换新话术优先出清"
     },
     {
-      "model": "iPad 标准版 蓝色 256GB",
-      "status": "仅3台",
+      "model": "Apple Watch Series 11 玫瑰金色表壳+淡桃粉色运动型表带M/L 46毫米 [MEVU",
+      "status": "最长225天",
       "sev": "orange",
-      "action": "推同系列高配机型"
+      "action": "申请老品专项优惠，搭配以旧换新话术优先出清"
     },
     {
-      "model": "Mac mini 银色 16G+256GB",
-      "status": "仅2台",
-      "sev": "red",
-      "action": "推 iPad Air 或 iPad 标准版 256GB"
+      "model": "iPhone 17 256GB",
+      "status": "最长167天",
+      "sev": "orange",
+      "action": "申请老品专项优惠，搭配以旧换新话术优先出清"
     },
     {
-      "model": "MacBook Air 13.6英寸 午夜色 16GB+512GB",
-      "status": "仅1台",
-      "sev": "red",
-      "action": "推同系列高配机型"
-    },
-    {
-      "model": "MacBook Air 13.6英寸 天蓝色 16GB+1TB",
-      "status": "仅1台",
-      "sev": "red",
-      "action": "推同系列高配机型"
-    },
-    {
-      "model": "MacBook Air 13.6英寸 星光色 16GB+1TB",
-      "status": "仅2台",
-      "sev": "red",
-      "action": "推同系列高配机型"
-    },
-    {
-      "model": "MacBook Air 13.6英寸 星光色 16GB+512GB",
-      "status": "仅1台",
-      "sev": "red",
-      "action": "推同系列高配机型"
-    },
-    {
-      "model": "MacBook Air 13.6英寸 银色 16GB+1TB",
-      "status": "仅1台",
-      "sev": "red",
-      "action": "推同系列高配机型"
-    },
-    {
-      "model": "MacBook Air 15.3英寸 天蓝色 16GB+1TB",
-      "status": "仅1台",
-      "sev": "red",
-      "action": "推同系列高配机型"
-    },
-    {
-      "model": "MacBook Air 15.3英寸 星光色 16GB+512GB",
-      "status": "仅1台",
-      "sev": "red",
-      "action": "推同系列高配机型"
-    },
-    {
-      "model": "MacBook Pro 14英寸 银色 24G+1TB",
-      "status": "仅1台",
-      "sev": "red",
-      "action": "推 MacBook Air M5"
+      "model": "Apple Watch Ultra 3 黑色 黑色高山回环式表带 S 49毫米 [MF0U4CH/B",
+      "status": "最长161天",
+      "sev": "orange",
+      "action": "申请老品专项优惠，搭配以旧换新话术优先出清"
     }
   ]
 };
