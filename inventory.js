@@ -1,5 +1,5 @@
 var DATA = {
-  "updated": "2026-05-01",
+  "updated": "2026-05-02",
   "summary": {
     "total": 484,
     "phone": 264,
