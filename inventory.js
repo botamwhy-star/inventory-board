@@ -206,77 +206,160 @@ var DATA = {
   "watch": [
     {
       "series": "Apple Watch SE GPS版",
-      "variant": "午夜色",
-      "qty": 3,
-      "avg_age": 82,
-      "status": "预警"
+      "color": "午夜色",
+      "detail": "午夜色表壳+午夜色运动型表带M/L 44毫米",
+      "qty": 2,
+      "avg_age": 62,
+      "status": "紧缺"
     },
     {
       "series": "Apple Watch SE GPS版",
-      "variant": "星光色",
-      "qty": 6,
-      "avg_age": 34,
+      "color": "午夜色",
+      "detail": "午夜色表壳+午夜色运动型表带S/M 40毫米",
+      "qty": 1,
+      "avg_age": 122,
+      "status": "紧缺"
+    },
+    {
+      "series": "Apple Watch SE GPS版",
+      "color": "星光色",
+      "detail": "星光色表壳+星光色运动型表带M/L 44毫米",
+      "qty": 2,
+      "avg_age": 64,
+      "status": "紧缺"
+    },
+    {
+      "series": "Apple Watch SE GPS版",
+      "color": "星光色",
+      "detail": "星光色表壳+星光色运动型表带S/M 40毫米",
+      "qty": 4,
+      "avg_age": 19,
       "status": "预警"
     },
     {
       "series": "Apple Watch SE 蜂窝版",
-      "variant": "午夜色",
+      "color": "午夜色",
+      "detail": "午夜色表壳+午夜色运动型表带M/L 44毫米",
       "qty": 1,
       "avg_age": 123,
       "status": "紧缺"
     },
     {
       "series": "Apple Watch SE 蜂窝版",
-      "variant": "星光色",
+      "color": "星光色",
+      "detail": "星光色表壳+星光色运动型表带S/M 40毫米",
       "qty": 4,
       "avg_age": 59,
       "status": "预警"
     },
     {
       "series": "Apple Watch Series 11 GPS版",
-      "variant": "亮黑色",
-      "qty": 12,
-      "avg_age": 77,
-      "status": "充足"
+      "color": "亮黑色",
+      "detail": "亮黑色表壳+黑色运动型表带M/L 42毫米",
+      "qty": 1,
+      "avg_age": 66,
+      "status": "紧缺"
     },
     {
       "series": "Apple Watch Series 11 GPS版",
-      "variant": "深空灰色",
-      "qty": 9,
-      "avg_age": 28,
+      "color": "亮黑色",
+      "detail": "亮黑色表壳+黑色运动型表带M/L 46毫米",
+      "qty": 1,
+      "avg_age": 182,
+      "status": "紧缺"
+    },
+    {
+      "series": "Apple Watch Series 11 GPS版",
+      "color": "亮黑色",
+      "detail": "亮黑色表壳+黑色运动型表带S/M 42毫米",
+      "qty": 4,
+      "avg_age": 105,
       "status": "预警"
     },
     {
       "series": "Apple Watch Series 11 GPS版",
-      "variant": "玫瑰金色",
+      "color": "亮黑色",
+      "detail": "亮黑色表壳+黑色运动型表带S/M 46毫米",
+      "qty": 6,
+      "avg_age": 42,
+      "status": "预警"
+    },
+    {
+      "series": "Apple Watch Series 11 GPS版",
+      "color": "深空灰色",
+      "detail": "深空灰色铝金属表壳+黑色运动型表带M/L 46毫米",
       "qty": 8,
-      "avg_age": 75,
+      "avg_age": 31,
       "status": "预警"
     },
     {
       "series": "Apple Watch Series 11 GPS版",
-      "variant": "银色",
-      "qty": 14,
-      "avg_age": 23,
-      "status": "充足"
+      "color": "深空灰色",
+      "detail": "深空灰色铝金属表壳+黑色运动型表带S/M 42毫米",
+      "qty": 1,
+      "avg_age": 3,
+      "status": "紧缺"
+    },
+    {
+      "series": "Apple Watch Series 11 GPS版",
+      "color": "玫瑰金色",
+      "detail": "玫瑰金色表壳+淡桃粉色运动型表带M/L 46毫米",
+      "qty": 1,
+      "avg_age": 269,
+      "status": "紧缺"
+    },
+    {
+      "series": "Apple Watch Series 11 GPS版",
+      "color": "玫瑰金色",
+      "detail": "玫瑰金色表壳+淡桃粉色运动型表带S/M 42毫米",
+      "qty": 3,
+      "avg_age": 88,
+      "status": "预警"
+    },
+    {
+      "series": "Apple Watch Series 11 GPS版",
+      "color": "玫瑰金色",
+      "detail": "玫瑰金色表壳+淡桃粉色运动型表带S/M 46毫米",
+      "qty": 4,
+      "avg_age": 18,
+      "status": "预警"
+    },
+    {
+      "series": "Apple Watch Series 11 GPS版",
+      "color": "银色",
+      "detail": "银色铝金属表壳+雾紫色运动型表带M/L 46毫米",
+      "qty": 9,
+      "avg_age": 5,
+      "status": "预警"
+    },
+    {
+      "series": "Apple Watch Series 11 GPS版",
+      "color": "银色",
+      "detail": "银色铝金属表壳+雾紫色运动型表带S/M 42毫米",
+      "qty": 5,
+      "avg_age": 55,
+      "status": "预警"
     },
     {
       "series": "Apple Watch Series 11 蜂窝版",
-      "variant": "亮黑色",
+      "color": "亮黑色",
+      "detail": "亮黑色表壳+黑色运动型表带M/L 46毫米",
       "qty": 2,
       "avg_age": 64,
       "status": "紧缺"
     },
     {
       "series": "Apple Watch Series 11 蜂窝版",
-      "variant": "玫瑰金色",
+      "color": "玫瑰金色",
+      "detail": "玫瑰金色表壳+淡桃粉色运动型表带S/M 42毫米",
       "qty": 1,
       "avg_age": 41,
       "status": "紧缺"
     },
     {
       "series": "Apple Watch Ultra 3 蜂窝版",
-      "variant": "黑色",
+      "color": "黑色",
+      "detail": "标准版 黑色 黑色海洋表带 49毫米",
       "qty": 1,
       "avg_age": 12,
       "status": "紧缺"
@@ -547,6 +630,12 @@ var DATA = {
   ],
   "push": [
     {
+      "series": "Apple Watch Series 11 GPS版",
+      "variant": "银色铝金属表壳+雾紫色运动型表带M/L 46毫米",
+      "qty": 9,
+      "avg_age": 5
+    },
+    {
       "series": "iPhone 17e",
       "variant": "浅粉色 256GB",
       "qty": 4,
@@ -616,26 +705,6 @@ var DATA = {
       "series": "iPhone Air",
       "variant": "云白色 256GB",
       "qty": 2
-    },
-    {
-      "series": "Apple Watch SE 蜂窝版",
-      "variant": "午夜色",
-      "qty": 1
-    },
-    {
-      "series": "Apple Watch Series 11 蜂窝版",
-      "variant": "亮黑色",
-      "qty": 2
-    },
-    {
-      "series": "Apple Watch Series 11 蜂窝版",
-      "variant": "玫瑰金色",
-      "qty": 1
-    },
-    {
-      "series": "Apple Watch Ultra 3 蜂窝版",
-      "variant": "黑色",
-      "qty": 1
     },
     {
       "series": "iPad",
@@ -760,6 +829,61 @@ var DATA = {
     {
       "series": "MacBook Pro 14英寸",
       "variant": "银色 24G+1TB",
+      "qty": 1
+    },
+    {
+      "series": "Apple Watch SE GPS版",
+      "variant": "午夜色表壳+午夜色运动型表带M/L 44毫米",
+      "qty": 2
+    },
+    {
+      "series": "Apple Watch SE GPS版",
+      "variant": "午夜色表壳+午夜色运动型表带S/M 40毫米",
+      "qty": 1
+    },
+    {
+      "series": "Apple Watch SE GPS版",
+      "variant": "星光色表壳+星光色运动型表带M/L 44毫米",
+      "qty": 2
+    },
+    {
+      "series": "Apple Watch SE 蜂窝版",
+      "variant": "午夜色表壳+午夜色运动型表带M/L 44毫米",
+      "qty": 1
+    },
+    {
+      "series": "Apple Watch Series 11 GPS版",
+      "variant": "亮黑色表壳+黑色运动型表带M/L 42毫米",
+      "qty": 1
+    },
+    {
+      "series": "Apple Watch Series 11 GPS版",
+      "variant": "亮黑色表壳+黑色运动型表带M/L 46毫米",
+      "qty": 1
+    },
+    {
+      "series": "Apple Watch Series 11 GPS版",
+      "variant": "深空灰色铝金属表壳+黑色运动型表带S/M 42毫米",
+      "qty": 1
+    },
+    {
+      "series": "Apple Watch Series 11 GPS版",
+      "variant": "玫瑰金色表壳+淡桃粉色运动型表带M/L 46毫米",
+      "qty": 1
+    },
+    {
+      "series": "Apple Watch Series 11 蜂窝版",
+      "variant": "亮黑色表壳+黑色运动型表带M/L 46毫米",
+      "qty": 2
+    },
+    {
+      "series": "Apple Watch Series 11 蜂窝版",
+      "variant": "玫瑰金色表壳+淡桃粉色运动型表带S/M 42毫米",
+      "qty": 1
+    },
+    {
+      "series": "Apple Watch Ultra 3 蜂窝版",
+      "variant": "标准版 黑色 黑色海洋表带 49毫米",
       "qty": 1
     }
   ]
