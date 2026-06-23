@@ -157,7 +157,7 @@ var DATA = {
     },
     {
       "series": "iPhone Air",
-      "variant": "天蓝色 256GB",
+      "variant": "天蓝色 256GB 权益版",
       "qty": 1,
       "status": "red",
       "tag": "控货"
@@ -178,7 +178,7 @@ var DATA = {
     },
     {
       "series": "iPhone Air",
-      "variant": "深空黑色 256GB",
+      "variant": "深空黑色 256GB 权益版",
       "qty": 2,
       "status": "red",
       "tag": "控货"
@@ -561,13 +561,13 @@ var DATA = {
       "action": "积极转推替代型号，避免断货"
     },
     {
-      "model": "iPhone Air 天蓝色 256GB",
+      "model": "iPhone Air 天蓝色 256GB 权益版",
       "status": "仅剩1台",
       "sev": "red",
       "action": "积极转推替代型号，避免断货"
     },
     {
-      "model": "iPhone Air 深空黑色 256GB",
+      "model": "iPhone Air 深空黑色 256GB 权益版",
       "status": "仅剩2台",
       "sev": "red",
       "action": "积极转推替代型号，避免断货"
