@@ -1,10 +1,10 @@
 var DATA = {
-  "updated": "2026-06-28",
+  "updated": "2026-06-30",
   "summary": {
-    "total": 320,
-    "phone": 161,
-    "watch": 53,
-    "ipad": 72,
+    "total": 282,
+    "phone": 129,
+    "watch": 50,
+    "ipad": 69,
     "mac": 34
   },
   "phone": [
@@ -18,21 +18,14 @@ var DATA = {
     {
       "series": "iPhone 17",
       "variant": "薰衣草紫色 256GB 标准版",
-      "qty": 3,
-      "status": "orange",
-      "tag": ""
-    },
-    {
-      "series": "iPhone 17",
-      "variant": "薰衣草紫色 512GB 标准版",
-      "qty": 1,
+      "qty": 2,
       "status": "red",
       "tag": "控货"
     },
     {
       "series": "iPhone 17",
       "variant": "青雾蓝色 256GB 标准版",
-      "qty": 2,
+      "qty": 1,
       "status": "red",
       "tag": "控货"
     },
@@ -60,7 +53,7 @@ var DATA = {
     {
       "series": "iPhone 17 Pro",
       "variant": "星宇橙色 256GB 标准版",
-      "qty": 12,
+      "qty": 9,
       "status": "green",
       "tag": "注意库龄"
     },
@@ -73,6 +66,13 @@ var DATA = {
     },
     {
       "series": "iPhone 17 Pro",
+      "variant": "深蓝色 256GB 标准版",
+      "qty": 1,
+      "status": "red",
+      "tag": "控货"
+    },
+    {
+      "series": "iPhone 17 Pro",
       "variant": "深蓝色 512GB 标准版",
       "qty": 1,
       "status": "red",
@@ -81,21 +81,21 @@ var DATA = {
     {
       "series": "iPhone 17 Pro",
       "variant": "银色 256GB 标准版",
-      "qty": 19,
+      "qty": 12,
       "status": "green",
       "tag": "注意库龄"
     },
     {
       "series": "iPhone 17 Pro",
       "variant": "银色 512GB 标准版",
-      "qty": 5,
+      "qty": 4,
       "status": "orange",
       "tag": "注意库龄"
     },
     {
       "series": "iPhone 17 Pro Max",
       "variant": "星宇橙色 256GB 标准版",
-      "qty": 12,
+      "qty": 9,
       "status": "green",
       "tag": "注意库龄"
     },
@@ -109,30 +109,16 @@ var DATA = {
     {
       "series": "iPhone 17 Pro Max",
       "variant": "深蓝色 256GB 标准版",
-      "qty": 2,
-      "status": "red",
-      "tag": "控货"
-    },
-    {
-      "series": "iPhone 17 Pro Max",
-      "variant": "深蓝色 512GB 标准版",
-      "qty": 2,
-      "status": "red",
-      "tag": "控货"
-    },
-    {
-      "series": "iPhone 17 Pro Max",
-      "variant": "银色 256GB 标准版",
-      "qty": 1,
-      "status": "red",
-      "tag": "控货"
+      "qty": 3,
+      "status": "orange",
+      "tag": ""
     },
     {
       "series": "iPhone 17 Pro Max",
       "variant": "银色 512GB 标准版",
-      "qty": 14,
-      "status": "green",
-      "tag": "注意库龄"
+      "qty": 1,
+      "status": "red",
+      "tag": "控货"
     },
     {
       "series": "iPhone 17e",
@@ -193,7 +179,7 @@ var DATA = {
     {
       "series": "iPhone Air",
       "variant": "深空黑色 256GB 标准版",
-      "qty": 2,
+      "qty": 1,
       "status": "red",
       "tag": "控货"
     }
@@ -216,14 +202,14 @@ var DATA = {
     {
       "series": "Apple Watch Series 11 GPS版",
       "variant": "亮黑色 运动型表带 S/M 46毫米",
-      "qty": 2,
+      "qty": 1,
       "status": "red",
       "tag": "控货"
     },
     {
       "series": "Apple Watch Series 11 GPS版",
       "variant": "深空灰色 运动型表带 M/L 46毫米",
-      "qty": 5,
+      "qty": 3,
       "status": "orange",
       "tag": "注意库龄"
     },
@@ -351,9 +337,9 @@ var DATA = {
     {
       "series": "iPad 第11代",
       "variant": "银色 256GB 标准版",
-      "qty": 8,
+      "qty": 6,
       "status": "green",
-      "tag": ""
+      "tag": "注意库龄"
     },
     {
       "series": "iPad Air 13英寸",
@@ -414,9 +400,9 @@ var DATA = {
     {
       "series": "iPad Air",
       "variant": "深空灰色 256GB 标准版",
-      "qty": 3,
-      "status": "orange",
-      "tag": "注意库龄"
+      "qty": 2,
+      "status": "red",
+      "tag": "控货"
     },
     {
       "series": "iPad Air",
@@ -564,7 +550,7 @@ var DATA = {
     {
       "model": "iPhone 17 Pro",
       "variant": "星宇橙色 256GB 标准版",
-      "qty": 12,
+      "qty": 9,
       "col": "#1E8E3E"
     },
     {
@@ -576,44 +562,44 @@ var DATA = {
     {
       "model": "iPhone 17 Pro",
       "variant": "银色 256GB 标准版",
-      "qty": 19,
+      "qty": 12,
       "col": "#E37400"
     },
     {
       "model": "iPhone 17 Pro Max",
       "variant": "星宇橙色 256GB 标准版",
-      "qty": 12,
+      "qty": 9,
       "col": "#D93025"
-    },
-    {
-      "model": "iPhone 17 Pro Max",
-      "variant": "银色 512GB 标准版",
-      "qty": 14,
-      "col": "#00897B"
     },
     {
       "model": "Apple Watch Series 11 GPS版",
       "variant": "亮黑色 运动型表带 M/L 46毫米",
       "qty": 16,
-      "col": "#3949AB"
+      "col": "#00897B"
     },
     {
       "model": "Apple Watch Series 11 GPS版",
       "variant": "银色 运动型表带 S/M 42毫米",
       "qty": 10,
+      "col": "#3949AB"
+    },
+    {
+      "model": "iPad 第11代",
+      "variant": "银色 128GB 标准版",
+      "qty": 13,
       "col": "#F4511E"
     }
   ],
   "warn": [
     {
-      "model": "iPhone 17 薰衣草紫色 512GB 标准版",
-      "status": "仅剩1台",
+      "model": "iPhone 17 薰衣草紫色 256GB 标准版",
+      "status": "仅剩2台",
       "sev": "red",
       "action": "积极转推替代型号，避免断货"
     },
     {
       "model": "iPhone 17 青雾蓝色 256GB 标准版",
-      "status": "仅剩2台",
+      "status": "仅剩1台",
       "sev": "red",
       "action": "积极转推替代型号，避免断货"
     },
@@ -630,26 +616,26 @@ var DATA = {
       "action": "积极转推替代型号，避免断货"
     },
     {
+      "model": "iPhone 17 Pro 深蓝色 256GB 标准版",
+      "status": "仅剩1台",
+      "sev": "red",
+      "action": "积极转推替代型号，避免断货"
+    },
+    {
       "model": "iPhone 17 Pro 深蓝色 512GB 标准版",
       "status": "仅剩1台",
       "sev": "red",
       "action": "积极转推替代型号，避免断货"
     },
     {
-      "model": "iPhone 17 Pro Max 深蓝色 256GB 标准版",
-      "status": "仅剩2台",
-      "sev": "red",
-      "action": "积极转推替代型号，避免断货"
-    },
-    {
-      "model": "iPhone 17 Pro Max 深蓝色 512GB 标准版",
-      "status": "仅剩2台",
-      "sev": "red",
-      "action": "积极转推替代型号，避免断货"
-    },
-    {
-      "model": "iPhone 17 Pro Max 银色 256GB 标准版",
+      "model": "iPhone 17 Pro Max 银色 512GB 标准版",
       "status": "仅剩1台",
+      "sev": "red",
+      "action": "积极转推替代型号，避免断货"
+    },
+    {
+      "model": "iPhone 17e 黑色 256GB 标准版",
+      "status": "仅剩2台",
       "sev": "red",
       "action": "积极转推替代型号，避免断货"
     }
