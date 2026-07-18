@@ -301,13 +301,6 @@ var DATA = {
     },
     {
       "series": "iPad 第11代",
-      "variant": "128GB 标准版",
-      "qty": 1,
-      "status": "red",
-      "tag": "控货"
-    },
-    {
-      "series": "iPad 第11代",
       "variant": "粉色 128GB 标准版",
       "qty": 3,
       "status": "orange",
@@ -347,6 +340,13 @@ var DATA = {
       "qty": 7,
       "status": "green",
       "tag": "注意库龄"
+    },
+    {
+      "series": "iPad 第11代",
+      "variant": "黄色 128GB 标准版",
+      "qty": 1,
+      "status": "red",
+      "tag": "控货"
     },
     {
       "series": "iPad Air 13英寸",
@@ -555,38 +555,24 @@ var DATA = {
     },
     {
       "series": "MacBook Neo",
-      "variant": "8GB+256GB 标准版",
+      "variant": "柑橘黄色 8GB+256GB 标准版",
       "qty": 1,
       "status": "red",
       "tag": "控货"
     },
     {
       "series": "MacBook Neo",
-      "variant": "8GB+512GB 标准版",
+      "variant": "柑橘黄色 8GB+512GB 标准版",
       "qty": 1,
       "status": "red",
       "tag": "控货"
     },
     {
       "series": "MacBook Neo",
-      "variant": "粉色 8GB+512GB 标准版",
+      "variant": "桃粉色 8GB+512GB 标准版",
       "qty": 3,
       "status": "orange",
       "tag": ""
-    },
-    {
-      "series": "MacBook Neo",
-      "variant": "蓝色 8GB+256GB 标准版",
-      "qty": 1,
-      "status": "red",
-      "tag": "控货"
-    },
-    {
-      "series": "MacBook Neo",
-      "variant": "蓝色 8GB+512GB 标准版",
-      "qty": 1,
-      "status": "red",
-      "tag": "控货"
     },
     {
       "series": "MacBook Neo",
@@ -601,6 +587,20 @@ var DATA = {
       "qty": 3,
       "status": "orange",
       "tag": ""
+    },
+    {
+      "series": "MacBook Neo",
+      "variant": "靛蓝色 8GB+256GB 标准版",
+      "qty": 1,
+      "status": "red",
+      "tag": "控货"
+    },
+    {
+      "series": "MacBook Neo",
+      "variant": "靛蓝色 8GB+512GB 标准版",
+      "qty": 1,
+      "status": "red",
+      "tag": "控货"
     }
   ],
   "push": [
