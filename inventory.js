@@ -1,18 +1,18 @@
 var DATA = {
-  "updated": "2026-09-04",
+  "updated": "2026-09-05",
   "summary": {
-    "total": 102,
-    "phone": 57,
+    "total": 96,
+    "phone": 56,
     "watch": 5,
-    "ipad": 36,
-    "mac": 4
+    "ipad": 33,
+    "mac": 2
   },
   "phone": [
     {
       "series": "iPhone 17",
       "variant": "白色 256GB 标准版",
-      "qty": 5,
-      "status": "orange",
+      "qty": 7,
+      "status": "green",
       "tag": ""
     },
     {
@@ -32,8 +32,8 @@ var DATA = {
     {
       "series": "iPhone 17 Pro",
       "variant": "星宇橙色 256GB 标准版",
-      "qty": 6,
-      "status": "green",
+      "qty": 5,
+      "status": "orange",
       "tag": ""
     },
     {
@@ -67,7 +67,7 @@ var DATA = {
     {
       "series": "iPhone 17 Pro",
       "variant": "银色 512GB 标准版",
-      "qty": 2,
+      "qty": 1,
       "status": "red",
       "tag": "控货"
     },
@@ -81,9 +81,9 @@ var DATA = {
     {
       "series": "iPhone 17 Pro Max",
       "variant": "星宇橙色 512GB 标准版",
-      "qty": 3,
-      "status": "orange",
-      "tag": "注意库龄"
+      "qty": 2,
+      "status": "red",
+      "tag": "控货"
     },
     {
       "series": "iPhone 17 Pro Max",
@@ -260,35 +260,28 @@ var DATA = {
     {
       "series": "iPad Air",
       "variant": "星光色 256GB 标准版",
-      "qty": 2,
+      "qty": 1,
       "status": "red",
       "tag": "控货"
     },
     {
       "series": "iPad Air",
       "variant": "深空灰色 128GB 标准版",
-      "qty": 1,
+      "qty": 2,
       "status": "red",
       "tag": "控货"
     },
     {
       "series": "iPad Air",
       "variant": "深空灰色 256GB 标准版",
-      "qty": 5,
+      "qty": 4,
       "status": "orange",
-      "tag": "注意库龄"
+      "tag": ""
     },
     {
       "series": "iPad Air",
       "variant": "紫色 128GB 标准版",
       "qty": 1,
-      "status": "red",
-      "tag": "控货"
-    },
-    {
-      "series": "iPad Air",
-      "variant": "紫色 256GB 标准版",
-      "qty": 2,
       "status": "red",
       "tag": "控货"
     },
@@ -309,22 +302,8 @@ var DATA = {
   ],
   "mac": [
     {
-      "series": "MacBook Air 13.6英寸",
-      "variant": "午夜色 16GB+512GB 标准版",
-      "qty": 1,
-      "status": "red",
-      "tag": "控货"
-    },
-    {
       "series": "MacBook Air 15英寸",
       "variant": "星光色 16GB+1TB 标准版",
-      "qty": 1,
-      "status": "red",
-      "tag": "控货"
-    },
-    {
-      "series": "MacBook Air 15英寸",
-      "variant": "银色 16GB+512GB 标准版",
       "qty": 1,
       "status": "red",
       "tag": "控货"
@@ -339,9 +318,9 @@ var DATA = {
   ],
   "push": [
     {
-      "model": "iPhone 17 Pro",
-      "variant": "星宇橙色 256GB 标准版",
-      "qty": 6,
+      "model": "iPhone 17",
+      "variant": "白色 256GB 标准版",
+      "qty": 7,
       "col": "#0051D4"
     },
     {
@@ -378,6 +357,12 @@ var DATA = {
     },
     {
       "model": "iPhone 17 Pro 银色 512GB 标准版",
+      "status": "仅剩1台",
+      "sev": "red",
+      "action": "积极转推替代型号，避免断货"
+    },
+    {
+      "model": "iPhone 17 Pro Max 星宇橙色 512GB 标准版",
       "status": "仅剩2台",
       "sev": "red",
       "action": "积极转推替代型号，避免断货"
@@ -390,12 +375,6 @@ var DATA = {
     },
     {
       "model": "iPhone 17 Pro Max 银色 512GB 标准版",
-      "status": "仅剩2台",
-      "sev": "red",
-      "action": "积极转推替代型号，避免断货"
-    },
-    {
-      "model": "iPhone Air 天蓝色 256GB 权益版",
       "status": "仅剩2台",
       "sev": "red",
       "action": "积极转推替代型号，避免断货"
