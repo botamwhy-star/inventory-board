@@ -1,15 +1,15 @@
 var DATA = {
-  "updated": "2026-09-20",
+  "updated": "2026-09-21",
   "summary": {
-    "total": 151,
-    "phone": 39,
-    "watch": 67,
-    "ipad": 34,
-    "mac": 11
+    "total": 141,
+    "phone": 33,
+    "watch": 65,
+    "ipad": 35,
+    "mac": 8
   },
   "phone": [
     {
-      "series": "iPhone 18 Pro Max",
+      "series": "iPhone 18 Pro",
       "variant": "冰川蓝色 256GB 标准版",
       "qty": 1,
       "status": "red",
@@ -18,16 +18,9 @@ var DATA = {
     {
       "series": "iPhone 18 Pro",
       "variant": "勃艮第酒红色 256GB 标准版",
-      "qty": 3,
+      "qty": 4,
       "status": "orange",
       "tag": ""
-    },
-    {
-      "series": "iPhone 18 Pro",
-      "variant": "勃艮第酒红色 2TB 标准版",
-      "qty": 1,
-      "status": "red",
-      "tag": "控货"
     },
     {
       "series": "iPhone 18 Pro",
@@ -53,7 +46,7 @@ var DATA = {
     {
       "series": "iPhone 17",
       "variant": "黑色 256GB 标准版",
-      "qty": 2,
+      "qty": 1,
       "status": "red",
       "tag": "控货"
     },
@@ -67,8 +60,8 @@ var DATA = {
     {
       "series": "iPhone 17 Pro",
       "variant": "银色 256GB 标准版",
-      "qty": 7,
-      "status": "green",
+      "qty": 5,
+      "status": "orange",
       "tag": ""
     },
     {
@@ -79,16 +72,9 @@ var DATA = {
       "tag": "控货"
     },
     {
-      "series": "iPhone 17 Pro Max",
-      "variant": "星宇橙色 512GB 标准版",
-      "qty": 2,
-      "status": "red",
-      "tag": "控货"
-    },
-    {
       "series": "iPhone Air",
       "variant": "云白色 256GB 标准版",
-      "qty": 2,
+      "qty": 1,
       "status": "red",
       "tag": "控货"
     },
@@ -139,7 +125,7 @@ var DATA = {
     {
       "series": "Apple Watch Series 12 GPS版",
       "variant": "浅金色 运动型表带 S/M 42毫米",
-      "qty": 14,
+      "qty": 12,
       "status": "green",
       "tag": ""
     },
@@ -236,13 +222,6 @@ var DATA = {
     },
     {
       "series": "Apple Watch Series 12 蜂窝版",
-      "variant": "深古铜色 运动型表带 S/M 42毫米",
-      "qty": 1,
-      "status": "red",
-      "tag": "控货"
-    },
-    {
-      "series": "Apple Watch Series 12 蜂窝版",
       "variant": "黑色 运动型表带 M/L 46毫米",
       "qty": 1,
       "status": "red",
@@ -265,6 +244,13 @@ var DATA = {
     {
       "series": "Apple Watch SE 3 GPS版",
       "variant": "星光色 运动型表带 S/M 40毫米",
+      "qty": 1,
+      "status": "red",
+      "tag": "控货"
+    },
+    {
+      "series": "Apple Watch Ultra 4 蜂窝版",
+      "variant": "原色 海洋表带 49毫米",
       "qty": 1,
       "status": "red",
       "tag": "控货"
@@ -358,9 +344,9 @@ var DATA = {
     {
       "series": "iPad Pro 11英寸",
       "variant": "银色 256GB 标准玻璃版",
-      "qty": 2,
-      "status": "red",
-      "tag": "控货"
+      "qty": 3,
+      "status": "orange",
+      "tag": ""
     },
     {
       "series": "iPad Air",
@@ -429,21 +415,7 @@ var DATA = {
     },
     {
       "series": "MacBook Air 13.6英寸",
-      "variant": "星光色 16GB+1TB 标准版",
-      "qty": 1,
-      "status": "red",
-      "tag": "控货"
-    },
-    {
-      "series": "MacBook Air 13.6英寸",
       "variant": "银色 16GB+1TB 标准版",
-      "qty": 1,
-      "status": "red",
-      "tag": "控货"
-    },
-    {
-      "series": "MacBook Air 13.6英寸",
-      "variant": "银色 16GB+512GB 标准版",
       "qty": 1,
       "status": "red",
       "tag": "控货"
@@ -468,13 +440,6 @@ var DATA = {
       "qty": 1,
       "status": "red",
       "tag": "控货"
-    },
-    {
-      "series": "MacBook Pro",
-      "variant": "银色 48GB+1TB",
-      "qty": 1,
-      "status": "red",
-      "tag": "控货"
     }
   ],
   "push": [
@@ -485,39 +450,27 @@ var DATA = {
       "col": "#0051D4"
     },
     {
-      "model": "iPhone 17 Pro",
-      "variant": "银色 256GB 标准版",
-      "qty": 7,
-      "col": "#1E8E3E"
-    },
-    {
       "model": "Apple Watch Series 12 GPS版",
       "variant": "浅金色 运动型表带 S/M 42毫米",
-      "qty": 14,
-      "col": "#8E44AD"
+      "qty": 12,
+      "col": "#1E8E3E"
     },
     {
       "model": "Apple Watch Series 12 GPS版",
       "variant": "深空灰色 运动型表带 M/L 46毫米",
       "qty": 8,
-      "col": "#E37400"
+      "col": "#8E44AD"
     },
     {
       "model": "Apple Watch Series 12 GPS版",
       "variant": "黑色 运动型表带 M/L 46毫米",
       "qty": 17,
-      "col": "#D93025"
+      "col": "#E37400"
     }
   ],
   "warn": [
     {
-      "model": "iPhone 18 Pro Max 冰川蓝色 256GB 标准版",
-      "status": "仅剩1台",
-      "sev": "red",
-      "action": "积极转推替代型号，避免断货"
-    },
-    {
-      "model": "iPhone 18 Pro 勃艮第酒红色 2TB 标准版",
+      "model": "iPhone 18 Pro 冰川蓝色 256GB 标准版",
       "status": "仅剩1台",
       "sev": "red",
       "action": "积极转推替代型号，避免断货"
@@ -536,7 +489,7 @@ var DATA = {
     },
     {
       "model": "iPhone 17 黑色 256GB 标准版",
-      "status": "仅剩2台",
+      "status": "仅剩1台",
       "sev": "red",
       "action": "积极转推替代型号，避免断货"
     },
@@ -553,7 +506,13 @@ var DATA = {
       "action": "积极转推替代型号，避免断货"
     },
     {
-      "model": "iPhone 17 Pro Max 星宇橙色 512GB 标准版",
+      "model": "iPhone Air 云白色 256GB 标准版",
+      "status": "仅剩1台",
+      "sev": "red",
+      "action": "积极转推替代型号，避免断货"
+    },
+    {
+      "model": "iPhone Air 天蓝色 256GB 权益版",
       "status": "仅剩2台",
       "sev": "red",
       "action": "积极转推替代型号，避免断货"
