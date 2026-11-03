@@ -478,13 +478,6 @@ var DATA = {
     },
     {
       "series": "MacBook Air 13.6英寸",
-      "variant": "银色 16GB+1TB",
-      "qty": 1,
-      "status": "red",
-      "tag": "控货"
-    },
-    {
-      "series": "MacBook Air 13.6英寸",
       "variant": "银色 16GB+1TB 标准版",
       "qty": 1,
       "status": "red",
@@ -492,8 +485,8 @@ var DATA = {
     },
     {
       "series": "MacBook Air 13.6英寸",
-      "variant": "银色 16GB+512GB",
-      "qty": 2,
+      "variant": "银色 16GB+1TB 美式键盘(定制机)",
+      "qty": 1,
       "status": "red",
       "tag": "控货"
     },
@@ -501,6 +494,13 @@ var DATA = {
       "series": "MacBook Air 13.6英寸",
       "variant": "银色 16GB+512GB 标准版",
       "qty": 1,
+      "status": "red",
+      "tag": "控货"
+    },
+    {
+      "series": "MacBook Air 13.6英寸",
+      "variant": "银色 16GB+512GB 美式键盘(定制机)",
+      "qty": 2,
       "status": "red",
       "tag": "控货"
     },
