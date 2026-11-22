@@ -1,11 +1,11 @@
 var DATA = {
-  "updated": "2026-11-21",
+  "updated": "2026-11-22",
   "summary": {
-    "total": 411,
-    "phone": 303,
-    "watch": 43,
-    "ipad": 35,
-    "mac": 30
+    "total": 401,
+    "phone": 295,
+    "watch": 42,
+    "ipad": 36,
+    "mac": 28
   },
   "phone": [
     {
@@ -20,7 +20,7 @@ var DATA = {
       "variant": "冰川蓝色 256GB 标准版",
       "qty": 7,
       "status": "green",
-      "tag": ""
+      "tag": "注意库龄"
     },
     {
       "series": "iPhone 18 Pro Max",
@@ -39,7 +39,7 @@ var DATA = {
     {
       "series": "iPhone 18 Pro Max",
       "variant": "勃艮第酒红色 256GB 标准版",
-      "qty": 18,
+      "qty": 16,
       "status": "green",
       "tag": "注意库龄"
     },
@@ -53,7 +53,7 @@ var DATA = {
     {
       "series": "iPhone 18 Pro Max",
       "variant": "勃艮第酒红色 512GB 标准版",
-      "qty": 18,
+      "qty": 15,
       "status": "green",
       "tag": ""
     },
@@ -116,7 +116,7 @@ var DATA = {
     {
       "series": "iPhone 18 Pro",
       "variant": "勃艮第酒红色 256GB 标准版",
-      "qty": 45,
+      "qty": 44,
       "status": "green",
       "tag": "注意库龄"
     },
@@ -214,7 +214,7 @@ var DATA = {
     {
       "series": "iPhone 17 Pro",
       "variant": "银色 256GB 标准版",
-      "qty": 35,
+      "qty": 34,
       "status": "green",
       "tag": "注意库龄"
     },
@@ -270,7 +270,7 @@ var DATA = {
     {
       "series": "iPhone Duo",
       "variant": "星光白色 512GB 标准版",
-      "qty": 2,
+      "qty": 1,
       "status": "red",
       "tag": "控货"
     }
@@ -286,7 +286,7 @@ var DATA = {
     {
       "series": "Apple Watch Series 12 GPS版",
       "variant": "浅金色 运动型表带 S/M 42毫米",
-      "qty": 5,
+      "qty": 4,
       "status": "orange",
       "tag": ""
     },
@@ -412,6 +412,13 @@ var DATA = {
   ],
   "ipad": [
     {
+      "series": "iPad mini",
+      "variant": "星光色 128GB 标准玻璃版",
+      "qty": 1,
+      "status": "red",
+      "tag": "控货"
+    },
+    {
       "series": "iPad 第11代",
       "variant": "粉色 128GB 标准版",
       "qty": 4,
@@ -535,7 +542,7 @@ var DATA = {
     {
       "series": "MacBook Air 13.6英寸",
       "variant": "午夜色 16GB+512GB 标准版",
-      "qty": 2,
+      "qty": 1,
       "status": "red",
       "tag": "控货"
     },
@@ -549,9 +556,9 @@ var DATA = {
     {
       "series": "MacBook Air 13.6英寸",
       "variant": "天蓝色 16GB+512GB 标准版",
-      "qty": 3,
-      "status": "orange",
-      "tag": "注意库龄"
+      "qty": 2,
+      "status": "red",
+      "tag": "控货"
     },
     {
       "series": "MacBook Air 13.6英寸",
@@ -690,13 +697,13 @@ var DATA = {
     {
       "model": "iPhone 18 Pro Max",
       "variant": "勃艮第酒红色 256GB 标准版",
-      "qty": 18,
+      "qty": 16,
       "col": "#1E8E3E"
     },
     {
       "model": "iPhone 18 Pro Max",
       "variant": "勃艮第酒红色 512GB 标准版",
-      "qty": 18,
+      "qty": 15,
       "col": "#8E44AD"
     },
     {
